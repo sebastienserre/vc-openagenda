@@ -41,6 +41,6 @@ function p2p5_vc_openagenda_api(){
 function p2p5_vc_openagenda_uid(){
 	?>
     <input type="text" name="openagenda_uid" value="<?php echo get_option('openagenda_uid')?>"/>
-    <p><?php _e('Create an account on OpenAgenda, and go to your setting page to get your API key.','vc-openagenda') ?></p>
+    <p><?php _e('Find your UID key in the bottom right of your Openagenda page.','vc-openagenda') ?></p>
 	<?php
 }
