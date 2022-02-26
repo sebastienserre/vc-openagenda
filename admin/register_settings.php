@@ -24,7 +24,9 @@ add_action('admin_init', 'p2p5_vc_openagenda_register_settings');
 function p2p5_vc_openagenda_register_settings(){
 	add_settings_section('p2p5_vc_openagenda_section', '', '', 'p2p5_openagenda_options');
 	register_setting('p2p5_openagenda_options', 'openagenda_api');
-	add_settings_field('openagenda_api', __('API Openagenda','5p2p-vc-openagenda'), 'p2p5_vc_openagenda_api', 'p2p5_openagenda_options', 'p2p5_vc_openagenda_section');
+	register_setting('p2p5_openagenda_options', 'openagenda_uid');
+	add_settings_field('openagenda_api', __('API Openagenda','vc-openagenda'), 'p2p5_vc_openagenda_api', 'p2p5_openagenda_options', 'p2p5_vc_openagenda_section');
+	add_settings_field('openagenda_uid', __('Agenda UID','vc-openagenda'), 'p2p5_vc_openagenda_uid', 'p2p5_openagenda_options', 'p2p5_vc_openagenda_section');
 
 }
 
@@ -32,6 +34,13 @@ function p2p5_vc_openagenda_register_settings(){
 function p2p5_vc_openagenda_api(){
 	?>
     <input type="text" name="openagenda_api" value="<?php echo get_option('openagenda_api')?>"/>
+    <p><?php _e('Create an account on OpenAgenda, and go to your setting page to get your API key.','5p2p-vc-openagenda') ?></p>
+	<?php
+}
+
+function p2p5_vc_openagenda_uid(){
+	?>
+    <input type="text" name="openagenda_uid" value="<?php echo get_option('openagenda_uid')?>"/>
     <p><?php _e('Create an account on OpenAgenda, and go to your setting page to get your API key.','5p2p-vc-openagenda') ?></p>
 	<?php
 }
