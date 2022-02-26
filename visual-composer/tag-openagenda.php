@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function p2p5_vc_openagenda_tag() {
 
 	vc_map( array(
-			'name'        => __( 'Tags Openagenda', '5p2p-vc-openagenda' ),
+			'name'        => __( 'Tags Openagenda', 'vc-openagenda' ),
 			'base'        => 'p2p5-vc-openagenda-tag',
-			'description' => __( 'Display Tags from Openagenda', '5p2p-vc-openagenda' ),
-			'category'    => __( '5 Pains & 2  Poissons', '5p2p-vc-openagenda' ),
+			'description' => __( 'Display Tags from Openagenda', 'vc-openagenda' ),
+			'category'    => __( '5 Pains & 2  Poissons', 'vc-openagenda' ),
 			'icon'        => P2P5_OPENAGENDA_URL . '/assets/img/icon.jpg',
 			'params'      => array(
 
@@ -17,47 +17,47 @@ function p2p5_vc_openagenda_tag() {
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'URL to Agenda', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'URL to Agenda', 'vc-openagenda' ),
 					'param_name'  => 'agenda_url',
 					'value'       => esc_url( site_url() ),
-					'description' => __( 'URL to Agenda in OpenAgenda.', '5p2p-vc-openagenda' ),
+					'description' => __( 'URL to Agenda in OpenAgenda.', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'vc_link',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Event Link', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Event Link', 'vc-openagenda' ),
 					'param_name'  => 'event-link',
 					'value'       => '',
 					'description' => '',
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'Hide background', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Hide background', 'vc-openagenda' ),
 					'param_name'  => 'background',
-					'description' => __( 'Write name of Tags to hide the background as it is on Openagenda.', '5p2p-vc-openagenda' ),
+					'description' => __( 'Write name of Tags to hide the background as it is on Openagenda.', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'checkbox',
 					'holder'      => 'p',
 					'class'       => 'hide-group-name',
-					'heading'     => __( 'Hide Group Name', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Hide Group Name', 'vc-openagenda' ),
 					'param_name'  => 'hide-group-name',
 					'value'       => 'yes',
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 			),
@@ -98,7 +98,7 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 		}
 
 	} else {
-		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', '5p2p-vc-openagenda' ) . '</p>';
+		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', 'vc-openagenda' ) . '</p>';
 	}
 
 	if ( $uid ) {

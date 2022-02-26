@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', 'openagenda_location_init' );
 function openagenda_location_init() {
 	vc_map( array(
-			'name'        => __( 'Location Openagenda', '5p2p-vc-openagenda' ),
+			'name'        => __( 'Location Openagenda', 'vc-openagenda' ),
 			'base'        => 'p2p5-vc-openagenda-location',
-			'description' => __( 'Filter by location from Openagenda', '5p2p-vc-openagenda' ),
-			'category'    => __( '5 Pains & 2  Poissons', '5p2p-vc-openagenda' ),
+			'description' => __( 'Filter by location from Openagenda', 'vc-openagenda' ),
+			'category'    => __( '5 Pains & 2  Poissons', 'vc-openagenda' ),
 			'icon'        => P2P5_OPENAGENDA_URL . '/assets/img/icon.jpg',
 			'params'      => array(
 
@@ -17,41 +17,41 @@ function openagenda_location_init() {
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'URL to Agenda', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'URL to Agenda', 'vc-openagenda' ),
 					'param_name'  => 'agenda_url',
 					'value'       => esc_url( site_url() ),
-					'description' => __( 'URL to Agenda in OpenAgenda.', '5p2p-vc-openagenda' ),
+					'description' => __( 'URL to Agenda in OpenAgenda.', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'vc_link',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Event Link', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Event Link', 'vc-openagenda' ),
 					'param_name'  => 'event-link',
 					'value'       => '',
 					'description' => '',
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'dropdown',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Event Link', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Event Link', 'vc-openagenda' ),
 					'param_name'  => 'layout',
 					'value'       => array(
-						__( 'List', '5p2p-vc-openagenda' )   => 'list',
-						__( 'Select', '5p2p-vc-openagenda' ) => 'select',
+						__( 'List', 'vc-openagenda' )   => 'list',
+						__( 'Select', 'vc-openagenda' ) => 'select',
 
 					),
 					'description' => '',
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 			),
 		)
@@ -98,7 +98,7 @@ function openagenda_location_select_html( $locations, $atts ) {
 	?>
 	<form>
 		<select class="auto-select" name="oaq[location]">
-			<option><?php _e( 'All', '5p2p-vc-openagenda' ) ?></option>
+			<option><?php _e( 'All', 'vc-openagenda' ) ?></option>
 			<?php
 			foreach ( $locations as $key => $value ) {
 				$key      = strval( $key );

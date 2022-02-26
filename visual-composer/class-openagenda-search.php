@@ -21,38 +21,38 @@ class Openagenda_Search {
 	public function openagenda_search_init() {
 		vc_map(
 			array(
-				'name'        => __( 'OpenAgenda Search', '5p2p-vc-openagenda' ),
+				'name'        => __( 'OpenAgenda Search', 'vc-openagenda' ),
 				'base'        => 'vc_openagenda_search',
-				'description' => __( 'Display your openAgenda searchbar in WordPress', '5p2p-vc-openagenda' ),
-				'category'    => __( '5 Pains & 2  Poissons', '5p2p-vc-openagenda' ),
+				'description' => __( 'Display your openAgenda searchbar in WordPress', 'vc-openagenda' ),
+				'category'    => __( '5 Pains & 2  Poissons', 'vc-openagenda' ),
 				'icon'        => P2P5_OPENAGENDA_URL . '/assets/img/icon.jpg',
 				'params'      => array(
 					array(
 						'type'        => 'textfield',
 						'holder'      => 'h3',
 						'class'       => 'title-class',
-						'heading'     => __( 'Title', '5p2p-vc-openagenda' ),
+						'heading'     => __( 'Title', 'vc-openagenda' ),
 						'param_name'  => 'agenda_title',
 						'admin_label' => false,
 						'weight'      => 0,
-						'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+						'group'       => __( 'Settings', 'vc-openagenda' ),
 					),
 					array(
 						'type'        => 'textfield',
 						'holder'      => 'h3',
 						'class'       => 'title-class',
-						'heading'     => __( 'Agenda URL', '5p2p-vc-openagenda' ),
+						'heading'     => __( 'Agenda URL', 'vc-openagenda' ),
 						'param_name'  => 'agenda_url',
-						'value'       => __( 'my-agenda-url', '5p2p-vc-openagenda' ),
+						'value'       => __( 'my-agenda-url', 'vc-openagenda' ),
 						'admin_label' => false,
 						'weight'      => 0,
-						'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+						'group'       => __( 'Settings', 'vc-openagenda' ),
 					),
 					array(
 						'type'        => 'dropdown',
 						'holder'      => 'h3',
 						'class'       => 'title-class',
-						'heading'     => __( 'Agenda title heading', '5p2p-vc-openagenda' ),
+						'heading'     => __( 'Agenda title heading', 'vc-openagenda' ),
 						'param_name'  => 'agenda_heading',
 						'value'       => array(
 							'H2' => 'h2',
@@ -63,36 +63,36 @@ class Openagenda_Search {
 						),
 						'admin_label' => false,
 						'weight'      => 0,
-						'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+						'group'       => __( 'Settings', 'vc-openagenda' ),
 					),
 					array(
 						'type'        => 'textfield',
 						'holder'      => 'h3',
 						'class'       => 'title-class',
-						'heading'     => __( 'Agenda language', '5p2p-vc-openagenda' ),
+						'heading'     => __( 'Agenda language', 'vc-openagenda' ),
 						'param_name'  => 'agenda_lang',
-						'value'       => __( 'fr', '5p2p-vc-openagenda' ),
+						'value'       => __( 'fr', 'vc-openagenda' ),
 						'admin_label' => false,
 						'weight'      => 0,
-						'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+						'group'       => __( 'Settings', 'vc-openagenda' ),
 					),
 					array(
 						'type'        => 'checkbox',
 						'holder'      => 'p',
 						'class'       => 'title-class',
-						'heading'     => __( 'Check the searchg field to show.', '5p2p-vc-openagenda' ),
+						'heading'     => __( 'Check the searchg field to show.', 'vc-openagenda' ),
 						'param_name'  => 'search_criteria',
 						'admin_label' => false,
 						'value'       => array(
-							__( 'Date', '5p2p-vc-openagenda' )         => 'date',
-							__( 'Tags', '5p2p-vc-openagenda' )         => 'tag',
-							__( 'Category', '5p2p-vc-openagenda' )     => 'category',
-							__( 'Search field', '5p2p-vc-openagenda' ) => 'search',
-							__( 'Venue', '5p2p-vc-openagenda' )        => 'venue',
+							__( 'Date', 'vc-openagenda' )         => 'date',
+							__( 'Tags', 'vc-openagenda' )         => 'tag',
+							__( 'Category', 'vc-openagenda' )     => 'category',
+							__( 'Search field', 'vc-openagenda' ) => 'search',
+							__( 'Venue', 'vc-openagenda' )        => 'venue',
 
 						),
 						'weight'      => 0,
-						'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+						'group'       => __( 'Settings', 'vc-openagenda' ),
 					),
 				),
 			)
@@ -160,7 +160,7 @@ class Openagenda_Search {
 	 * @return string html code to display.
 	 */
 	public function openagenda_search_html( $uid, $embed, $atts ) {
-		$html = '<p>' . __( 'Search', '5p2p-vc-openagenda' ) . '</p><div class="cbpgsc cibulSearch" data-oasc data-cbctl="' . $uid . '/' . $embed . '|' . $atts['agenda_lang'] . '" data-lang="fr"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulSearchWidget.js"></script>';
+		$html = '<p>' . __( 'Search', 'vc-openagenda' ) . '</p><div class="cbpgsc cibulSearch" data-oasc data-cbctl="' . $uid . '/' . $embed . '|' . $atts['agenda_lang'] . '" data-lang="fr"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulSearchWidget.js"></script>';
 
 		return $html;
 	}
@@ -186,7 +186,7 @@ jQuery("input.dateTo").change(function(){
 	}
 
 	public function openagenda_tag_html( $uid, $embed, $atts ) {
-		$html = '<p>' . __( 'Tags', '5p2p-vc-openagenda' ) . '</p><div class="cbpgtg cibulTags" data-oatg data-cbctl="' . $uid . '/' . $embed . '"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulTagsWidget.js"></script>';
+		$html = '<p>' . __( 'Tags', 'vc-openagenda' ) . '</p><div class="cbpgtg cibulTags" data-oatg data-cbctl="' . $uid . '/' . $embed . '"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulTagsWidget.js"></script>';
 
 		return $html;
 	}
@@ -199,7 +199,7 @@ jQuery("input.dateTo").change(function(){
 
 		$html   = 'Lieu:';
 		$html   .= '<select class="auto-select" name="venue">';
-		$html   .= '<option>' . __( 'All', '5p2p-vc-openagenda' ) . '</option>';
+		$html   .= '<option>' . __( 'All', 'vc-openagenda' ) . '</option>';
 		foreach ( $lieu as $key => $l ) {
 			$selected = selected( $_GET['venue'], $key, false);
 			$html .= '<option value="' . $key . '" ' . $selected .'>' . $l . '</option>';
@@ -216,7 +216,7 @@ jQuery("select.auto-select").change(function(){
 	}
 
 	public function openagenda_category_html( $uid, $embed, $atts ) {
-		$html = '<p>' . __( 'Category', '5p2p-vc-openagenda' ) . '</p><div class="cbpgct cibulCategories" data-oact data-cbctl="' . $uid . '/' . $embed . '" data-lang="' . $atts['agenda_lang'] . '"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulCategoriesWidget.js"></script>';
+		$html = '<p>' . __( 'Category', 'vc-openagenda' ) . '</p><div class="cbpgct cibulCategories" data-oact data-cbctl="' . $uid . '/' . $embed . '" data-lang="' . $atts['agenda_lang'] . '"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulCategoriesWidget.js"></script>';
 
 		return $html;
 	}

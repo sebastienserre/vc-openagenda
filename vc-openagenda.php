@@ -50,7 +50,7 @@
 
 	add_action( 'plugins_loaded', 'p2p5_vc_openagenda_load_textdomain' );
 	function p2p5_vc_openagenda_load_textdomain() {
-		load_plugin_textdomain( '5p2p-vc-openagenda', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		load_plugin_textdomain( 'vc-openagenda', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'p2p5_vc_openagenda_enqueue' );

@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function p2p5_vc_openagenda_main_init() {
 
 	vc_map( array(
-			'name'        => __( 'Main Openagenda', '5p2p-vc-openagenda' ),
+			'name'        => __( 'Main Openagenda', 'vc-openagenda' ),
 			'base'        => 'p2p5-vc-openagenda-main',
-			'description' => __( 'Display Openagenda Script', '5p2p-vc-openagenda' ),
-			'category'    => __( '5 Pains & 2  Poissons', '5p2p-vc-openagenda' ),
+			'description' => __( 'Display Openagenda Script', 'vc-openagenda' ),
+			'category'    => __( '5 Pains & 2  Poissons', 'vc-openagenda' ),
 			'icon'        => P2P5_OPENAGENDA_URL . '/assets/img/icon.jpg',
 			'params'      => array(
 
@@ -17,73 +17,73 @@ function p2p5_vc_openagenda_main_init() {
 					'type'        => 'textfield',
 					'holder'      => 'h3',
 					'class'       => 'title-class',
-					'heading'     => __( 'Title', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Title', 'vc-openagenda' ),
 					'param_name'  => 'title',
-					'value'       => __( 'Title', '5p2p-vc-openagenda' ),
-					'description' => __( 'Add a word between % to add a different style. Only 1 allowed', '5p2p-vc-openagenda' ),
+					'value'       => __( 'Title', 'vc-openagenda' ),
+					'description' => __( 'Add a word between % to add a different style. Only 1 allowed', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'URL to Event', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'URL to Event', 'vc-openagenda' ),
 					'param_name'  => 'agenda_url',
 					'value'       => esc_url( site_url() ),
-					'description' => __( 'URL to the OpenAgenda Agenda', '5p2p-vc-openagenda' ),
+					'description' => __( 'URL to the OpenAgenda Agenda', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'Agenda Code', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Agenda Code', 'vc-openagenda' ),
 					'param_name'  => 'agenda_code',
 					'value'       => 'YYYYYYYY',
-					'description' => __( 'OPenAgenda will give you an iframe code with this: data-oabdy src="//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr". What you need is to copy/past the YYYYYYYY (8 digits) ', '5p2p-vc-openagenda' ),
+					'description' => __( 'OPenAgenda will give you an iframe code with this: data-oabdy src="//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr". What you need is to copy/past the YYYYYYYY (8 digits) ', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'dropdown',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Widget Type', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Widget Type', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_type',
 					'value'       => array(
-						__( 'Please select an OpenAgenda Widget', '5p2p-vc-openagenda' ) => 'nothing',
-						__( 'General', '5p2p-vc-openagenda' )                            => 'general',
-						__( 'Map', '5p2p-vc-openagenda' )                                => 'map',
-						__( 'Search', '5p2p-vc-openagenda' )                             => 'search',
-						__( 'Categories', '5p2p-vc-openagenda' )                         => 'categories',
-						__( 'Tags', '5p2p-vc-openagenda' )                               => 'tags',
-						__( 'Calendrier', '5p2p-vc-openagenda' )                         => 'calendrier',
-						__( 'Preview Widget', '5p2p-vc-openagenda' )                     => 'preview',
-						__( 'localisation', '5p2p-vc-openagenda' )                       => 'localisation',
+						__( 'Please select an OpenAgenda Widget', 'vc-openagenda' ) => 'nothing',
+						__( 'General', 'vc-openagenda' )                            => 'general',
+						__( 'Map', 'vc-openagenda' )                                => 'map',
+						__( 'Search', 'vc-openagenda' )                             => 'search',
+						__( 'Categories', 'vc-openagenda' )                         => 'categories',
+						__( 'Tags', 'vc-openagenda' )                               => 'tags',
+						__( 'Calendrier', 'vc-openagenda' )                         => 'calendrier',
+						__( 'Preview Widget', 'vc-openagenda' )                     => 'preview',
+						__( 'localisation', 'vc-openagenda' )                       => 'localisation',
 					),
-					'description' => __( 'Select the widget to display', '5p2p-vc-openagenda' ),
+					'description' => __( 'Select the widget to display', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'vc_link',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Agenda page in your Website', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Agenda page in your Website', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_url',
-					'description' => __( 'Select the page where the main agenda is', '5p2p-vc-openagenda' ),
+					'description' => __( 'Select the page where the main agenda is', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 
@@ -129,7 +129,7 @@ function p2p5_vc_openagenda_main( $atts ) {
 		}
 
 	} else {
-		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', '5p2p-vc-openagenda' ) . '</p>';
+		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', 'vc-openagenda' ) . '</p>';
 	}
 
 	if ( $uid ) {

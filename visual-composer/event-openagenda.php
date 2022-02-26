@@ -6,10 +6,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 function p2p5_vc_openagenda_element() {
 
 	vc_map( array(
-			'name'        => __( 'Event Openagenda', '5p2p-vc-openagenda' ),
+			'name'        => __( 'Event Openagenda', 'vc-openagenda' ),
 			'base'        => 'p2p5-vc-openagenda',
-			'description' => __( 'Display Event from Openagenda', '5p2p-vc-openagenda' ),
-			'category'    => __( '5 Pains & 2  Poissons', '5p2p-vc-openagenda' ),
+			'description' => __( 'Display Event from Openagenda', 'vc-openagenda' ),
+			'category'    => __( '5 Pains & 2  Poissons', 'vc-openagenda' ),
 			'icon'        => P2P5_OPENAGENDA_URL . '/assets/img/icon.jpg',
 			'params'      => array(
 
@@ -17,106 +17,106 @@ function p2p5_vc_openagenda_element() {
 					'type'        => 'textfield',
 					'holder'      => 'h3',
 					'class'       => 'title-class',
-					'heading'     => __( 'Title', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Title', 'vc-openagenda' ),
 					'param_name'  => 'title',
-					'value'       => __( 'Title', '5p2p-vc-openagenda' ),
-					'description' => __( 'Add a word between % to add a different style. Only 1 allowed', '5p2p-vc-openagenda' ),
+					'value'       => __( 'Title', 'vc-openagenda' ),
+					'description' => __( 'Add a word between % to add a different style. Only 1 allowed', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'a',
 					'class'       => 'url-class',
-					'heading'     => __( 'URL to Agenda', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'URL to Agenda', 'vc-openagenda' ),
 					'param_name'  => 'agenda_url',
 					'value'       => esc_url( site_url() ),
-					'description' => __( 'URL to Agenda. You must create a page integrating OpenAgenda', '5p2p-vc-openagenda' ),
+					'description' => __( 'URL to Agenda. You must create a page integrating OpenAgenda', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'dropdown',
 					'holder'      => 'p',
 					'class'       => 'layout-mission',
-					'heading'     => __( 'Choose your layout', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Choose your layout', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_layout',
-					'description' => __( 'Choose your layout', '5p2p-vc-openagenda' ),
+					'description' => __( 'Choose your layout', 'vc-openagenda' ),
 					'admin_label' => false,
 					'value'       => array( 'Horizontal' => 'hor', 'Vertical' => 'ver' ),
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'vc_link',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Event Link', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Event Link', 'vc-openagenda' ),
 					'param_name'  => 'event-link',
 					'value'       => '',
 					'description' => '',
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'p',
 					'class'       => 'openagenda_cat',
-					'heading'     => __( 'Categorie to display', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Categorie to display', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_cat',
-					'description' => __( 'Choose the categorie to display. Only one category allowed. If you choose a Category, do not choose a Tag too', '5p2p-vc-openagenda' ),
+					'description' => __( 'Choose the categorie to display. Only one category allowed. If you choose a Category, do not choose a Tag too', 'vc-openagenda' ),
 					'admin_label' => false,
 					'value'       => '',
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'p',
 					'class'       => 'openagenda_tag',
-					'heading'     => __( 'Tag to display', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Tag to display', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_tag',
-					'description' => __( 'Choose the tag to display. Only one category allowed. If you choose a Tag, do not choose a Category too', '5p2p-vc-openagenda' ),
+					'description' => __( 'Choose the tag to display. Only one category allowed. If you choose a Tag, do not choose a Category too', 'vc-openagenda' ),
 					'admin_label' => false,
 					'value'       => '',
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 				array(
 					'type'        => 'textfield',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Nb of event', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Nb of event', 'vc-openagenda' ),
 					'param_name'  => 'nb_event',
 					'value'       => '1',
-					'description' => __( 'Number of event to display', '5p2p-vc-openagenda' ),
+					'description' => __( 'Number of event to display', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 				array(
 					'type'        => 'checkbox',
 					'holder'      => 'p',
 					'class'       => 'title-class',
-					'heading'     => __( 'Options', '5p2p-vc-openagenda' ),
+					'heading'     => __( 'Options', 'vc-openagenda' ),
 					'param_name'  => 'openagenda_option',
 					'value'       => array(
-						__( 'Category', '5p2p-vc-openagenda' ) => 'cat',
-						__( 'Tag', '5p2p-vc-openagenda' )      => 'tag',
-						__( 'Date', '5p2p-vc-openagenda' )     => 'date',
-						__( 'City', '5p2p-vc-openagenda' )     => 'venue',
+						__( 'Category', 'vc-openagenda' ) => 'cat',
+						__( 'Tag', 'vc-openagenda' )      => 'tag',
+						__( 'Date', 'vc-openagenda' )     => 'date',
+						__( 'City', 'vc-openagenda' )     => 'venue',
 					),
-					'description' => __( 'Check the options to display', '5p2p-vc-openagenda' ),
+					'description' => __( 'Check the options to display', 'vc-openagenda' ),
 					'admin_label' => false,
 					'weight'      => 0,
-					'group'       => __( 'Settings', '5p2p-vc-openagenda' ),
+					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
 
 
@@ -448,7 +448,7 @@ function p2p5_vc_retrieve_info( $atts ) {
 
 
 	} else {
-		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', '5p2p-vc-openagenda' ) . '</p>';
+		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', 'vc-openagenda' ) . '</p>';
 	}
 
 	if ( $uid ) {
@@ -477,7 +477,7 @@ function p2p5_vc_retrieve_info( $atts ) {
 
 
 		if ( empty( $response ) ) {
-			$warning = '<p>' . __( 'No events Found', '5p2p-vc-openagenda' ) . '</p>';
+			$warning = '<p>' . __( 'No events Found', 'vc-openagenda' ) . '</p>';
 		}
 
 		$decoded_body = array();
@@ -494,7 +494,7 @@ function p2p5_vc_retrieve_info( $atts ) {
 	$events  = $decoded_body['events'];
 
 	if ( empty( $events ) ) {
-		$warning = '<p>' . __( 'No events Found', '5p2p-vc-openagenda' ) . '</p>';
+		$warning = '<p>' . __( 'No events Found', 'vc-openagenda' ) . '</p>';
 	}
 
 	ob_start();
@@ -572,9 +572,9 @@ function p2p5_vc_retrieve_info( $atts ) {
 		    $lastday = date_i18n('d F', strtotime( $dates[ $nb_day ]['end'] ) );
 
 		    if( $firstday !== $lastday ) {
-			    $date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'from %1s to %2s', '5p2p-vc-openagenda' ), $firstday, $lastday ) . '</p>';
+			    $date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'from %1s to %2s', 'vc-openagenda' ), $firstday, $lastday ) . '</p>';
 		    } else {
-			    $date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'On %s', '5p2p-vc-openagenda' ), $firstday ) . '</p>';
+			    $date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'On %s', 'vc-openagenda' ), $firstday ) . '</p>';
 
 		    }
 

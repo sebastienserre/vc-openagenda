@@ -57,7 +57,7 @@ class OpenAgendaApi {
 	 */
 	public function thfo_openwp_retrieve_data( $slug, $nb = 10 ) {
 		if ( empty( $slug ) ) {
-			return '<p>' . __( 'You forgot to add a slug of agenda to retrieve', '5p2p-vc-openagenda' ) . '</p>';
+			return '<p>' . __( 'You forgot to add a slug of agenda to retrieve', 'vc-openagenda' ) . '</p>';
 		}
 		if ( empty( $nb ) ) {
 			$nb = 10;
@@ -74,10 +74,10 @@ class OpenAgendaApi {
 				$body         = wp_remote_retrieve_body( $response );
 				$decoded_body = json_decode( $body, true );
 			} else {
-				$decoded_body = '<p>' . __( 'Impossible to retrieve Events Data', '5p2p-vc-openagenda' ) . '</p>';
+				$decoded_body = '<p>' . __( 'Impossible to retrieve Events Data', 'vc-openagenda' ) . '</p>';
 			}
 		} else {
-			$decoded_body = '<p>' . __( 'Impossible to retrieve Events Data', '5p2p-vc-openagenda' ) . '</p>';
+			$decoded_body = '<p>' . __( 'Impossible to retrieve Events Data', 'vc-openagenda' ) . '</p>';
 		}
 
 		return $decoded_body;
@@ -141,7 +141,7 @@ class OpenAgendaApi {
 			}
 			do_action( 'openwp_after_html' );
 			// translators: this is a link to add events in Openagenda.com.
-			$text = sprintf( wp_kses( __( 'Have an Event to display here? <a href="%s">Add it!</a>', '5p2p-vc-openagenda' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $slug ) );
+			$text = sprintf( wp_kses( __( 'Have an Event to display here? <a href="%s">Add it!</a>', 'vc-openagenda' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( $slug ) );
 			$text = apply_filters( 'openwp_custom_add_event_text', $text );
 			echo $text;
 
