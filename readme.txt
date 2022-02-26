@@ -1,5 +1,5 @@
 === OpenAgenda for Visual Composer ===
-Contributors: sebastien@thivinfo.com, 5p2p
+Contributors: sebastien@thivinfo.com
 Tags: openagenda, visual composer
 Tested up to: 4.8.1
 Stable tag: 1.0.0
@@ -7,7 +7,7 @@ License: GPL V2 or later
 
 == Description ==
 Display a Slider with events from OpenAgenda.com
-Created by http://5pains-et-2poissons.fr/
+Initially Created by http://5pains-et-2poissons.fr/
 
 == Installation ==
 1. unzip
@@ -17,7 +17,7 @@ Created by http://5pains-et-2poissons.fr/
 
 == Frequently Asked Questions ==
 = Do I need an account on Openagenda.com ? =
-Yes! Events are created on openagenda.com. This plulgins only diplay events created there.
+Yes! Events are created on openagenda.com. This plugins only display events created there.
 
 
 == Upgrade Notice ==
