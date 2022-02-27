@@ -102,18 +102,10 @@ function p2p5_vc_openagenda_main( $atts ) {
 		'agenda_code'     => '',
 		'openagenda_type' => 'nothing',
 		'openagenda_url'  => '',
-
-
-	),
+        ),
 		$atts, 'p2p5-vc-openagenda-main'
 	);
-
-	$url    = ( ! empty( $atts['openagenda_url'] ) ) ? vc_build_link( $atts['openagenda_url'] ) : '';
 	$widget = $atts['agenda_code'];
-
-	$re = '/[a-zA-Z\.\/:]*\/([a-zA-Z\.\/:\0-_9]*)/';
-
-	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 
 	$uid = get_option( 'openagenda_uid' );
 
@@ -163,23 +155,13 @@ function p2p5_vc_openagenda_main( $atts ) {
 				<div class="cbpgcl cibulCalendar widget-oa" data-oacl data-cbctl="<?php echo $uid ?>/<?php echo $widget;?>|fr" data-lang="fr"></div><script type="text/javascript" src="//openagenda.com/js/embed/cibulCalendarWidget.js"></script>
 				<?php
 				break;
-			/*case 'preview':
-			    ?>
-				<div class="oa-preview cbpgpr" data-oapr data-cbctl="<?php echo $uid; ?>|fr"><a href="<?php echo $url['url']; ?> '">Voir l\'agenda</a>/div><script src="//openagenda.com/js/embed/oaPreviewWidget.js"></script>
-				<?php
-				break;
-			case 'localisation':
-				Openagenda_Search::openagenda_venue_html( $uid, $embed, $atts );
-				break;*/
-		}
+            }
 		?>
         </div>
 <?php
 
 		return ob_get_clean();
 
-	} else {
-		echo '<p>' . $warning . '</p>';
 	}
 }
 
