@@ -80,26 +80,14 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 
 	$atts['background'] = sanitize_title( $atts['background'] );
 
+    $uid = get_option( 'openagenda_uid' );
+
 	$re = '/[a-zA-Z\.\/:]*\/([a-zA-Z\.\/:\0-_9]*)/';
 
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 
 	$slug = untrailingslashit( $matches[1][0] );
 	$key  = get_option( 'openagenda_api' );
-
-
-	if ( ! empty( $key ) ) {
-
-		$response = wp_remote_get( 'https://api.openagenda.com/v1/agendas/uid/' . $slug . '?key=' . $key );
-		if ( 200 === (int) wp_remote_retrieve_response_code( $response ) ) {
-			$body         = wp_remote_retrieve_body( $response );
-			$decoded_body = json_decode( $body, true );
-			$uid          = $decoded_body['data']['uid'];
-		}
-
-	} else {
-		$warning = '<p>' . __( 'Please add an OpenAgenda API Key in Settings / OpenAgenda Settings', 'vc-openagenda' ) . '</p>';
-	}
 
 	if ( $uid ) {
 
