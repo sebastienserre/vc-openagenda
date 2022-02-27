@@ -1,8 +1,8 @@
 === OpenAgenda for Visual Composer ===
 Contributors: sebastien@thivinfo.com
 Tags: openagenda, visual composer
-Tested up to: 4.8.1
-Stable tag: 1.0.0
+Tested up to: 5.9
+Stable tag: 1.1
 License: GPL V2 or later
 
 == Description ==
@@ -28,5 +28,6 @@ use automatic upgrade
 Soon
 
 == Changelog ==
+* 1.1 remove call to OpenAgenda v1 call
 
 * 1.0.0 Initial version

@@ -1,10 +1,10 @@
 <?php
 	/*
-	* Plugin name: 5P2P VC OpenAgenda
-	* Author: 5P2P
-	* Author URI: https://5pains-et-2poissons.fr/
+	* Plugin name: VC OpenAgenda
+	* Author: Sébastien Serre
+	* Author URI: https://thivinfo.com/
 	* Description: This plugin allows you to display an openagenda in your WP via a Visual Composer element
-	* Version: 999
+	* Version: 1.1
 	* License: GPLv2 or later
 	* License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	* Text Domain: vc-openagenda
