@@ -103,7 +103,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
 
-	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
+	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?lang=[a-z]*)/';
 
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 
