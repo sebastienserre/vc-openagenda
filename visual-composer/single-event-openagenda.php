@@ -105,12 +105,20 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?lang=[a-z]*)/';
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
+	if ( empty( $matches ) ) {
+		$re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
+		preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
+	}
+
+	$slug = untrailingslashit( $matches[1][0] );
 
 	$re = '/\?lang=([a-z]*)/';
 	preg_match( $re, $matches[2][0], $langs, PREG_OFFSET_CAPTURE, 0 );
-	$atts['lang'] = $langs[1][0];
+	$atts['lang'] = 'fr';
+	if ( ! empty( $langs ) ) {
+		$atts['lang'] = $langs[1][0];
+	}
 
-	$slug         = untrailingslashit( $matches[1][0] );
 	$oa           = new OpenAgendaApi();
 	$decoded_body = $oa->thfo_openwp_retrieve_data( $slug, 200 );
 
