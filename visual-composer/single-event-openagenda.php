@@ -104,8 +104,11 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	);
 
 	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?lang=[a-z]*)/';
-
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
+
+	$re = '/\?lang=([a-z]*)/';
+	preg_match( $re, $matches[2][0], $langs, PREG_OFFSET_CAPTURE, 0 );
+	$atts['lang'] = $langs[1][0];
 
 	$slug         = untrailingslashit( $matches[1][0] );
 	$oa           = new OpenAgendaApi();
@@ -127,7 +130,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	if ( ! empty( $atts['title'] ) ) {
 		echo '<h2>' . $atts['title'] . '</h2>';
 	} else {
-		echo '<h2>' . $event['title']['fr'] . '</h2>';
+		echo '<h2>' . $event['title'][ $atts['lang'] ] . '</h2>';
 	}
 
 	echo '<div class="p2p5-vc-element-openagenda">';
@@ -200,7 +203,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	$img_size = get_image_size( 'featured-post' );
 
 	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $target = '', $rel = '', $event, $url,
-		$img_size );
+		$img_size, $decoded_body );
 
 	echo '</div>';
 
@@ -212,7 +215,7 @@ add_shortcode( 'p2p5-vc-openagenda-single-event', 'p2p5_vc_retrieve_info_single'
 
 function p2p5_vc_display_single(
 	$atts, $city, $date, $cat, $description, $target, $rel, $event, $url,
-	$img_size
+	$img_size, $decoded_body
 ) { ?>
 
     <div class="p2p5-vc-element-openagenda-single hor">
@@ -232,7 +235,7 @@ function p2p5_vc_display_single(
 			} ?>
 
             <h2 class="p2p5-vc-element-openagenda-details-title"><a
-                        href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><?php echo $decoded_body['data']['title']['fr']; ?></a>
+                        href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?></a>
             </h2>
 
 			<?php echo $description ?>
