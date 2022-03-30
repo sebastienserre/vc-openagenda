@@ -190,14 +190,12 @@ function p2p5_vc_display_single(
         <div class="p2p5-vc-element-openagenda-picture left">
             <a href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><img
                         src="<?php echo $event["image"] ?>"
-                        width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>></a>
-			<?php if ( ! empty( $atts['openagenda_layout'] ) && $atts['openagenda_layout'] == 'ver' ) {
-				echo $cat;
-			} ?>
+                        width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>>
+            </a>
         </div>
         <div class="p2p5-vc-element-openagenda-details right">
 			<?php
-			echo '<h2>' . $atts['title'] . '</h2>';
+			echo '<h2><a href="' . $url . '"' . $target . $rel . '>' . $atts['title'] . '</a></h2>';
 			echo $city;
 			echo $date;
 			echo $cat;
