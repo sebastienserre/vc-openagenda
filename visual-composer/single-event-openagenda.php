@@ -134,8 +134,10 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$city = '<p class="p2p5-vc-element-openagenda-details-city">' . $city . '</p>';
 	}
 
-	$description = $event['html'][$atts['lang']];
+	$description = $event['html'][ $atts['lang'] ];
 	if ( ! empty( $description ) ) {
+		$description = explode( '<br />', $description );
+		$description = strip_tags( $description[0] );
 		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '</p>';
 	}
 
@@ -193,10 +195,10 @@ function p2p5_vc_display_single(
 				echo '<h2>' . $event['title'][ $atts['lang'] ] . '</h2>';
 			}
 			echo $city ?>
-			<?php echo $date ?>
-			<?php if ( ! empty( $atts['openagenda_layout'] ) && $atts['openagenda_layout'] == 'hor' ) {
-				echo $cat;
-			} ?>
+			<?php
+			echo $date;
+			echo $cat;
+			?>
 
             <h2 class="p2p5-vc-element-openagenda-details-title"><a
                         href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?></a>
