@@ -113,17 +113,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	$start  = strtotime( $event['timings'][0]['start'] );
 	$end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
 
-	ob_start();
-
-	if ( ! empty( $atts['title'] ) ) {
-		echo '<h2>' . $atts['title'] . '</h2>';
-	} else {
-		echo '<h2>' . $event['title'][ $atts['lang'] ] . '</h2>';
-	}
-
-	echo '<div class="p2p5-vc-element-openagenda">';
-
-
 	/**
 	 * Several form according lenght of event (1 or more days)
 	 */
@@ -140,12 +129,12 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 		$date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'from %1s to %2s', 'vc-openagenda' ), $start, $end ) . '</p>';
 	}
-	$city = $event["location"]["city"];
+	$city = $event['location']['city'];
 	if ( ! empty( $city ) ) {
 		$city = '<p class="p2p5-vc-element-openagenda-details-city">' . $city . '</p>';
 	}
 
-	$description = $event["html"]["fr"];
+	$description = $event['html'][$atts['lang']];
 	if ( ! empty( $description ) ) {
 		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '</p>';
 	}
@@ -172,10 +161,10 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	$img_size = get_image_size( 'featured-post' );
 
+	ob_start();
+
 	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $target = '', $rel = '', $event, $url,
 		$img_size, $decoded_body );
-
-	echo '</div>';
 
 	return ob_get_clean();
 
@@ -187,8 +176,7 @@ function p2p5_vc_display_single(
 	$atts, $city, $date, $cat, $description, $target, $rel, $event, $url,
 	$img_size, $decoded_body
 ) { ?>
-
-    <div class="p2p5-vc-element-openagenda-single hor">
+    <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
         <div class="p2p5-vc-element-openagenda-picture left">
             <a href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><img
                         src="<?php echo $event["image"] ?>"
@@ -198,7 +186,13 @@ function p2p5_vc_display_single(
 			} ?>
         </div>
         <div class="p2p5-vc-element-openagenda-details right">
-			<?php echo $city ?>
+			<?php
+			if ( ! empty( $atts['title'] ) ) {
+				echo '<h2>' . $atts['title'] . '</h2>';
+			} else {
+				echo '<h2>' . $event['title'][ $atts['lang'] ] . '</h2>';
+			}
+			echo $city ?>
 			<?php echo $date ?>
 			<?php if ( ! empty( $atts['openagenda_layout'] ) && $atts['openagenda_layout'] == 'hor' ) {
 				echo $cat;
