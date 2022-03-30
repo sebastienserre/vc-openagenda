@@ -163,6 +163,14 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	$img_size = get_image_size( 'featured-post' );
 
+	if ( empty( $atts['title'] ) ) {
+		$atts['title'] = $event['title'][ $atts['lang'] ];
+	}
+
+	if ( empty( $atts['agenda_text'] ) ) {
+		$atts['agenda_text'] = __( 'Read more', 'vc-openagenda' );
+	}
+
 	ob_start();
 
 	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $target = '', $rel = '', $event, $url,
@@ -189,21 +197,17 @@ function p2p5_vc_display_single(
         </div>
         <div class="p2p5-vc-element-openagenda-details right">
 			<?php
-			if ( ! empty( $atts['title'] ) ) {
-				echo '<h2>' . $atts['title'] . '</h2>';
-			} else {
-				echo '<h2>' . $event['title'][ $atts['lang'] ] . '</h2>';
-			}
-			echo $city ?>
-			<?php
+			echo '<h2>' . $atts['title'] . '</h2>';
+			echo $city;
 			echo $date;
 			echo $cat;
 			?>
 
-            <h2 class="p2p5-vc-element-openagenda-details-title"><a
-                        href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?></a>
+            <h2 class="p2p5-vc-element-openagenda-details-title">
+                <a href="<?php echo $url ?>" <?php echo $target . $rel; ?> >
+					<?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?>
+                </a>
             </h2>
-
 			<?php echo $description ?>
         </div>
         <a href="<?php echo $url ?>" <?php echo $target . $rel; ?>
