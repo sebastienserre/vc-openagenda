@@ -145,10 +145,10 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$city = '<p class="p2p5-vc-element-openagenda-details-city">' . $city . '</p>';
 	}
 
-		$description = $event["html"]["fr"];
-		if ( ! empty( $description ) ) {
-			$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '</p>';
-		}
+	$description = $event["html"]["fr"];
+	if ( ! empty( $description ) ) {
+		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '</p>';
+	}
 
 	/**
 	 * create link readmore
@@ -162,7 +162,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 			),
 		), $atts['event-link']['url'] );
-
 
 	if ( $atts['event-link']['target'] == ' _blank' ) {
 		$target = 'target="_blank"';
