@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 5P2P VC OpenAgenda\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-04 16:28+0000\n"
-"PO-Revision-Date: 2019-06-13 13:40+0000\n"
+"PO-Revision-Date: 2022-03-30 05:58+0000\n"
 "Last-Translator: sebastienserre <sebastien@5p2p.fr>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -23,30 +23,6 @@ msgstr ""
 "X-Loco-Target-Locale: fr_FR\n"
 "X-Loco-Version: 2.3.0; wp-5.2.1"
 
-#: admin/register_settings.php:9
-msgid "OpenAgenda Settings"
-msgstr "Réglages d'OpenAgenda"
-
-#: admin/register_settings.php:27
-msgid "API Openagenda"
-msgstr "API Openagenda"
-
-#: admin/register_settings.php:35
-msgid ""
-"Create an account on OpenAgenda, and go to your setting page to get your API "
-"key."
-msgstr ""
-"Créer un compte sur OpenAgenda et rendez-vous dans les réglages pour obtenir "
-"votre clé API."
-
-#: visual-composer/class-openagenda-search.php:24
-msgid "OpenAgenda Search"
-msgstr "Recherche OpenAgenda"
-
-#: visual-composer/class-openagenda-search.php:26
-msgid "Display your openAgenda searchbar in WordPress"
-msgstr "Afficher votre barre de recherche OpenAgenda dans WordPress"
-
 #: visual-composer/class-openagenda-search.php:27
 #: visual-composer/location-openagenda.php:12
 #: visual-composer/tag-openagenda.php:12 visual-composer/openagenda-main.php:12
@@ -57,16 +33,363 @@ msgstr "Afficher votre barre de recherche OpenAgenda dans WordPress"
 msgid "5 Pains & 2  Poissons"
 msgstr "5 Pains & 2  Poissons"
 
-#: visual-composer/class-openagenda-search.php:34
-#: visual-composer/openagenda-main.php:20
-#: visual-composer/openagenda-main.php:22 visual-composer/visual-slide.php:50
-#: visual-composer/visual-slide.php:52
-#: visual-composer/single-event-openagenda.php:20
-#: visual-composer/single-event-openagenda.php:22
-#: visual-composer/event-openagenda.php:20
-#: visual-composer/event-openagenda.php:22
-msgid "Title"
-msgstr "Titre"
+#: visual-composer/openagenda-main.php:23 visual-composer/visual-slide.php:53
+#: visual-composer/single-event-openagenda.php:23
+#: visual-composer/event-openagenda.php:23
+msgid "Add a word between % to add a different style. Only 1 allowed"
+msgstr ""
+"Ajoutez un mot entre % pour utiliser un style différent. Seulement une fois "
+"par titre"
+
+#: visual-composer/openagenda-main.php:46
+msgid "Agenda Code"
+msgstr "Code OpenAgenda"
+
+#: visual-composer/class-openagenda-search.php:72
+msgid "Agenda language"
+msgstr "Langue de l'agenda"
+
+#: visual-composer/openagenda-main.php:81
+msgid "Agenda page in your Website"
+msgstr "Page Agenta sur votre site"
+
+#: visual-composer/visual-slide.php:37
+msgid "Agenda Slug"
+msgstr "Identifiant de l'agenda"
+
+#: visual-composer/class-openagenda-search.php:55
+msgid "Agenda title heading"
+msgstr "Titre de l'agenda"
+
+#: admin/register_settings.php:29
+msgid "Agenda UID"
+msgstr "UID de l'agenda"
+
+#: visual-composer/class-openagenda-search.php:44
+msgid "Agenda URL"
+msgstr "URL de l'agenda"
+
+#: visual-composer/class-openagenda-search.php:202
+#: visual-composer/location-openagenda.php:101
+msgid "All"
+msgstr "Votre recherche par localisation"
+
+#: admin/register_settings.php:28
+msgid "API Openagenda"
+msgstr "API Openagenda"
+
+#: visual-composer/visual-slide.php:102
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#: visual-composer/openagenda-main.php:68
+msgid "Calendrier"
+msgstr "Calendrier"
+
+#: visual-composer/visual-slide.php:141 visual-composer/visual-slide.php:144
+msgid "Cat Filter"
+msgstr "Filtre par catégorie"
+
+#: visual-composer/event-openagenda.php:71
+msgid "Categorie to display"
+msgstr "Catégorie à afficher"
+
+#: visual-composer/openagenda-main.php:66
+msgid "Categories"
+msgstr "Catégories"
+
+#: visual-composer/class-openagenda-search.php:89
+#: visual-composer/class-openagenda-search.php:219
+#: visual-composer/event-openagenda.php:111
+msgid "Category"
+msgstr "Catégorie"
+
+#: visual-composer/category-openagenda.php:9
+msgid "Category Openagenda"
+msgstr "Catégorie Openagenda"
+
+#: visual-composer/event-openagenda.php:116
+msgid "Check the options to display"
+msgstr "Cochez les options à afficher"
+
+#: visual-composer/class-openagenda-search.php:83
+msgid "Check the searchg field to show."
+msgstr "Cocher les champs de recherche à afficher"
+
+#: visual-composer/event-openagenda.php:73
+msgid ""
+"Choose the categorie to display. Only one category allowed. If you choose a "
+"Category, do not choose a Tag too"
+msgstr ""
+"Choisissez la catégorie à afficher. Une seule catégorie permise. Si vous "
+"choisissez une catégorie, ne choisissez pas de tags"
+
+#: visual-composer/event-openagenda.php:85
+msgid ""
+"Choose the tag to display. Only one category allowed. If you choose a Tag, "
+"do not choose a Category too"
+msgstr ""
+"Choisissez le tag à afficher. Un seul tag permise. Si vous choisissez un tag,"
+" ne choisissez pas de catégorie"
+
+#: visual-composer/event-openagenda.php:46
+#: visual-composer/event-openagenda.php:48
+msgid "Choose your layout"
+msgstr "Choisissez votre disposition"
+
+#: visual-composer/event-openagenda.php:114
+msgid "City"
+msgstr "Ville"
+
+#: visual-composer/visual-slide.php:89
+msgid "Color to Title"
+msgstr "Couleur du titre"
+
+#: admin/register_settings.php:37
+msgid ""
+"Create an account on OpenAgenda, and go to your setting page to get your API "
+"key."
+msgstr ""
+"Créer un compte sur OpenAgenda et rendez-vous dans les réglages pour obtenir "
+"votre clé API."
+
+#: visual-composer/class-openagenda-search.php:87
+#: visual-composer/event-openagenda.php:113
+msgid "Date"
+msgstr "Date"
+
+#: visual-composer/visual-slide.php:105
+msgid "Date Box background color"
+msgstr "Couleur de fond de l'encadré date"
+
+#: visual-composer/visual-slide.php:118
+msgid "Date Box text color"
+msgstr "Couleur du texte de la boite date"
+
+#: visual-composer/single-event-openagenda.php:11
+msgid "Display 1 Event from Openagenda"
+msgstr "Affiche 1 évènement depuis Openagenda"
+
+#: visual-composer/category-openagenda.php:11
+msgid "Display Category from Openagenda"
+msgstr "Afficher les catégorie d'OpenAgenda"
+
+#: visual-composer/event-openagenda.php:11
+msgid "Display Event from Openagenda"
+msgstr "Afficher un Évènement depuis OpenAgenda"
+
+#: visual-composer/openagenda-main.php:11
+msgid "Display Openagenda Script"
+msgstr "Affiche les scripts OpenAgenda"
+
+#: visual-composer/tag-openagenda.php:11
+msgid "Display Tags from Openagenda"
+msgstr "Afficher des tags depuis OpenAgenda"
+
+#: visual-composer/visual-slide.php:170
+msgid "Display Venue"
+msgstr "Afficher le lieu"
+
+#: visual-composer/visual-slide.php:167
+msgid "Display venue"
+msgstr "Afficher le lieu"
+
+#: visual-composer/visual-slide.php:28
+msgid "Display your openAgenda in a slider view"
+msgstr "Affiche Openagenda dans un slider"
+
+#: visual-composer/class-openagenda-search.php:26
+msgid "Display your openAgenda searchbar in WordPress"
+msgstr "Afficher votre barre de recherche OpenAgenda dans WordPress"
+
+#: visual-composer/location-openagenda.php:32
+#: visual-composer/location-openagenda.php:44
+#: visual-composer/tag-openagenda.php:32
+#: visual-composer/category-openagenda.php:32
+#: visual-composer/event-openagenda.php:59
+msgid "Event Link"
+msgstr "Lien vers l'évènement"
+
+#: visual-composer/single-event-openagenda.php:58
+msgid ""
+"Event Link in Openagenda or in your website if you created a special agenda "
+"page"
+msgstr ""
+"Liens de l'évènement sur Openagenda ou votre site si vous avez créé une page "
+"spéciale"
+
+#: visual-composer/event-openagenda.php:9
+msgid "Event Openagenda"
+msgstr "Évènement OpenAgenda"
+
+#: visual-composer/location-openagenda.php:11
+msgid "Filter by location from Openagenda"
+msgstr "Filtrer par lieu OpenAgenda"
+
+#: admin/register_settings.php:44
+msgid "Find your UID key in the bottom right of your Openagenda page."
+msgstr ""
+"Trouvez la clé UID dans le bas de page à droite de votre page OpenAgenda"
+
+#: visual-composer/class-openagenda-search.php:74
+msgid "fr"
+msgstr "fr"
+
+#: visual-composer/single-event-openagenda.php:130
+#: visual-composer/event-openagenda.php:561
+#, php-format
+msgid "from %1s to %2s"
+msgstr "Du %1s au %2s"
+
+#: visual-composer/openagenda-main.php:63
+msgid "General"
+msgstr "Général"
+
+#. this is a link to add events in Openagenda.com.
+#: inc/class/class-openagenda-api.php:140
+#, php-format
+msgid "Have an Event to display here? <a href=\"%s\">Add it!</a>"
+msgstr "Ajouter votre évènement"
+
+#: visual-composer/tag-openagenda.php:44
+msgid "Hide background"
+msgstr "Masquer la couleur de fond"
+
+#: visual-composer/tag-openagenda.php:55
+msgid "Hide Group Name"
+msgstr "Masquer le nom du groupe"
+
+#. Author URI of the plugin
+msgid "https://thivinfo.com/"
+msgstr "https://thivinfo.com/"
+
+#: inc/class/class-openagenda-api.php:78 inc/class/class-openagenda-api.php:81
+msgid "Impossible to retrieve Events Data"
+msgstr "Impossible de récupérer les données des évènements"
+
+#: visual-composer/visual-slide.php:76 visual-composer/visual-slide.php:78
+#: visual-composer/single-event-openagenda.php:46
+#: visual-composer/single-event-openagenda.php:48
+msgid "Link Text"
+msgstr "Texte du lien"
+
+#: visual-composer/location-openagenda.php:47
+msgid "List"
+msgstr "Liste"
+
+#: visual-composer/openagenda-main.php:70
+msgid "localisation"
+msgstr "Localisation"
+
+#: visual-composer/location-openagenda.php:9
+msgid "Location Openagenda"
+msgstr "Lieu OpenAgenda"
+
+#: visual-composer/openagenda-main.php:9
+msgid "Main Openagenda"
+msgstr "Openagenda Principal"
+
+#: visual-composer/openagenda-main.php:64
+msgid "Map"
+msgstr "Carte"
+
+#: visual-composer/visual-slide.php:39
+msgid "my-agenda-slug"
+msgstr "mon-identifiant"
+
+#: visual-composer/class-openagenda-search.php:46
+msgid "my-agenda-url"
+msgstr "mon-url"
+
+#: visual-composer/event-openagenda.php:95
+msgid "Nb of event"
+msgstr "Nombre d'évènement"
+
+#: visual-composer/event-openagenda.php:466
+#: visual-composer/event-openagenda.php:483
+msgid "No events Found"
+msgstr "Aucun évènement trouvé"
+
+#: visual-composer/event-openagenda.php:98
+msgid "Number of event to display"
+msgstr "Nombre d'évènement à afficher"
+
+#: visual-composer/single-event-openagenda.php:122
+#: visual-composer/event-openagenda.php:563
+#, php-format
+msgid "On %s"
+msgstr "Le %s"
+
+#: visual-composer/class-openagenda-search.php:24
+msgid "OpenAgenda Search"
+msgstr "Recherche OpenAgenda"
+
+#: admin/register_settings.php:9
+msgid "OpenAgenda Settings"
+msgstr "Réglages d'OpenAgenda"
+
+#: visual-composer/visual-slide.php:26
+msgid "OpenAgenda Slider"
+msgstr "Slider OPenAgenda"
+
+#: visual-composer/openagenda-main.php:49
+msgid ""
+"OPenAgenda will give you an iframe code with this: data-oabdy "
+"src=\"//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr\". "
+"What you need is to copy/past the YYYYYYYY (8 digits) "
+msgstr ""
+"OpenAgenda va& vous fournir une iframe avec ce genre de code: data-oabdy "
+"src=\"//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr\". "
+"Vous devez copier/coller le YYYYYYYY (8 chiffres)"
+
+#: visual-composer/event-openagenda.php:108
+msgid "Options"
+msgstr "Options"
+
+#: visual-composer/openagenda-main.php:62
+msgid "Please select an OpenAgenda Widget"
+msgstr "Veuillez sélectionner un widget OpenAgenda"
+
+#: visual-composer/openagenda-main.php:69
+msgid "Preview Widget"
+msgstr "Widget de prévisualisation"
+
+#: visual-composer/single-event-openagenda.php:171
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: visual-composer/class-openagenda-search.php:163
+#: visual-composer/openagenda-main.php:65
+msgid "Search"
+msgstr "Rechercher"
+
+#: visual-composer/visual-slide.php:154
+msgid "search"
+msgstr "Rechercher"
+
+#: visual-composer/class-openagenda-search.php:90
+msgid "Search field"
+msgstr "Champs de recherche"
+
+#: visual-composer/visual-slide.php:157
+msgid "search Filter"
+msgstr "Filtre recherche"
+
+#: visual-composer/location-openagenda.php:48
+msgid "Select"
+msgstr "Sélection"
+
+#: visual-composer/visual-slide.php:92
+msgid "Select the color for the  title part between %"
+msgstr "Choisissez la couleur pour la partie du titre entre %"
+
+#: visual-composer/openagenda-main.php:83
+msgid "Select the page where the main agenda is"
+msgstr "Sélectionnez la page où se trouve l'agenda"
+
+#: visual-composer/openagenda-main.php:72
+msgid "Select the widget to display"
+msgstr "Choisissez le widget à afficher"
 
 #: visual-composer/class-openagenda-search.php:38
 #: visual-composer/class-openagenda-search.php:49
@@ -89,7 +412,6 @@ msgstr "Titre"
 #: visual-composer/single-event-openagenda.php:39
 #: visual-composer/single-event-openagenda.php:52
 #: visual-composer/single-event-openagenda.php:64
-#: visual-composer/single-event-openagenda.php:81
 #: visual-composer/event-openagenda.php:26
 #: visual-composer/event-openagenda.php:39
 #: visual-composer/event-openagenda.php:52
@@ -101,35 +423,33 @@ msgstr "Titre"
 msgid "Settings"
 msgstr "Réglages"
 
-#: visual-composer/class-openagenda-search.php:44
-msgid "Agenda URL"
-msgstr "URL de l'agenda"
+#: visual-composer/single-event-openagenda.php:9
+msgid "Single Event Openagenda"
+msgstr "1 seul évènement OpenAgenda"
 
-#: visual-composer/class-openagenda-search.php:46
-msgid "my-agenda-url"
-msgstr "mon-url"
+#: visual-composer/visual-slide.php:270
+msgid "Sorry, no events found"
+msgstr "Désolé, aucun évènement trouvé"
 
-#: visual-composer/class-openagenda-search.php:55
-msgid "Agenda title heading"
-msgstr "Titre de l'agenda"
+#. Author of the plugin
+msgid "Sébastien Serre"
+msgstr "Sébastien Serre"
 
-#: visual-composer/class-openagenda-search.php:72
-msgid "Agenda language"
-msgstr "Langue de l'agenda"
+#: visual-composer/event-openagenda.php:112
+msgid "Tag"
+msgstr "Tag"
 
-#: visual-composer/class-openagenda-search.php:74
-msgid "fr"
-msgstr "fr"
+#: visual-composer/visual-slide.php:131
+msgid "Tag Filter"
+msgstr "Filtres par tags"
 
-#: visual-composer/class-openagenda-search.php:83
-msgid "Check the searchg field to show."
-msgstr "Cocher les champs de recherche à afficher"
+#: visual-composer/visual-slide.php:128
+msgid "tag Filter"
+msgstr "Filtres par tags"
 
-#: visual-composer/class-openagenda-search.php:87
-#: visual-composer/single-event-openagenda.php:74
-#: visual-composer/event-openagenda.php:113
-msgid "Date"
-msgstr "Date"
+#: visual-composer/event-openagenda.php:83
+msgid "Tag to display"
+msgstr "Tag à afficher"
 
 #: visual-composer/class-openagenda-search.php:88
 #: visual-composer/class-openagenda-search.php:189
@@ -137,37 +457,47 @@ msgstr "Date"
 msgid "Tags"
 msgstr "Tags"
 
-#: visual-composer/class-openagenda-search.php:89
-#: visual-composer/class-openagenda-search.php:219
-#: visual-composer/event-openagenda.php:111
-msgid "Category"
-msgstr "Catégorie"
+#: visual-composer/tag-openagenda.php:9
+msgid "Tags Openagenda"
+msgstr "Tags Openagenda"
 
-#: visual-composer/class-openagenda-search.php:90
-msgid "Search field"
-msgstr "Champs de recherche"
+#: visual-composer/visual-slide.php:115
+msgid "text color"
+msgstr "Couleur du texte"
 
-#: visual-composer/class-openagenda-search.php:91
-msgid "Venue"
-msgstr "Lieu"
+#: visual-composer/visual-slide.php:79
+#: visual-composer/single-event-openagenda.php:49
+msgid "Text for the link"
+msgstr "Texte du Lien"
 
-#: visual-composer/class-openagenda-search.php:163
-#: visual-composer/openagenda-main.php:65
-msgid "Search"
-msgstr "Rechercher"
+#: visual-composer/visual-slide.php:40
+msgid ""
+"The Slug of your agenda in openagenda. For example, if your Openagenda URL "
+"is https://openagenda.com/my-great-calendar, then the slug is my-great-"
+"calendar"
+msgstr ""
+"L'identifiant de votre agenda dans Openagenda. Par exemple, si votre URL "
+"Openagenda est https://openagenda.com/my-great-calendar, alors l'identifiant "
+"est my-great-calendar"
 
-#: visual-composer/class-openagenda-search.php:202
-#: visual-composer/location-openagenda.php:100
-msgid "All"
-msgstr "Votre recherche par localisation"
+#. Description of the plugin
+msgid ""
+"This plugin allows you to display an openagenda in your WP via a Visual "
+"Composer element"
+msgstr ""
+"Cette extension vous permet d'ajouter un agenda OpenAgenda grâce à un "
+"élément Visual Composer"
 
-#: visual-composer/location-openagenda.php:9
-msgid "Location Openagenda"
-msgstr "Lieu OpenAgenda"
-
-#: visual-composer/location-openagenda.php:11
-msgid "Filter by location from Openagenda"
-msgstr "Filtrer par lieu OpenAgenda"
+#: visual-composer/class-openagenda-search.php:34
+#: visual-composer/openagenda-main.php:20
+#: visual-composer/openagenda-main.php:22 visual-composer/visual-slide.php:50
+#: visual-composer/visual-slide.php:52
+#: visual-composer/single-event-openagenda.php:20
+#: visual-composer/single-event-openagenda.php:22
+#: visual-composer/event-openagenda.php:20
+#: visual-composer/event-openagenda.php:22
+msgid "Title"
+msgstr "Titre"
 
 #: visual-composer/location-openagenda.php:20
 #: visual-composer/tag-openagenda.php:20 visual-composer/visual-slide.php:63
@@ -182,33 +512,34 @@ msgstr "URL vers l'agenda"
 msgid "URL to Agenda in OpenAgenda."
 msgstr "URL vers l'agenda dans OpenAgenda"
 
-#: visual-composer/location-openagenda.php:32
-#: visual-composer/location-openagenda.php:44
-#: visual-composer/tag-openagenda.php:32
-#: visual-composer/category-openagenda.php:32
-#: visual-composer/event-openagenda.php:59
-msgid "Event Link"
-msgstr "Lien vers l'évènement"
+#: visual-composer/visual-slide.php:66 visual-composer/event-openagenda.php:36
+msgid "URL to Agenda. You must create a page integrating OpenAgenda"
+msgstr "URL vers l'agenda, vous devez créer une page intégrant OpenAgenda"
 
-#: visual-composer/location-openagenda.php:47
-msgid "List"
-msgstr "Liste"
+#: visual-composer/openagenda-main.php:33
+#: visual-composer/single-event-openagenda.php:33
+msgid "URL to Event"
+msgstr "URL vers l'évènement"
 
-#: visual-composer/location-openagenda.php:48
-msgid "Select"
-msgstr "Sélection"
+#: visual-composer/single-event-openagenda.php:36
+msgid "URL to the event in OpenAgenda"
+msgstr "URL de l'évènement dans OpenAgenda"
 
-#: visual-composer/tag-openagenda.php:9
-msgid "Tags Openagenda"
-msgstr "Tags Openagenda"
+#: visual-composer/openagenda-main.php:36
+msgid "URL to the OpenAgenda Agenda"
+msgstr "URL vers votre agenda OpenAgenda"
 
-#: visual-composer/tag-openagenda.php:11
-msgid "Display Tags from Openagenda"
-msgstr "Afficher des tags depuis OpenAgenda"
+#. Name of the plugin
+msgid "VC OpenAgenda"
+msgstr "VC OpenAgenda"
 
-#: visual-composer/tag-openagenda.php:44
-msgid "Hide background"
-msgstr "Masquer la couleur de fond"
+#: visual-composer/class-openagenda-search.php:91
+msgid "Venue"
+msgstr "Lieu"
+
+#: visual-composer/openagenda-main.php:59
+msgid "Widget Type"
+msgstr "Type de Widget"
 
 #: visual-composer/tag-openagenda.php:46
 msgid "Write name of Tags to hide the background as it is on Openagenda."
@@ -216,343 +547,6 @@ msgstr ""
 "Écrivez le nom du groupe de tags (comme sur OpenAgenda) ou vous ne voulez "
 "pas voir de fond."
 
-#: visual-composer/tag-openagenda.php:55
-msgid "Hide Group Name"
-msgstr "Masquer le nom du groupe"
-
-#: visual-composer/tag-openagenda.php:101
-#: visual-composer/openagenda-main.php:132
-#: visual-composer/category-openagenda.php:76
-#: visual-composer/single-event-openagenda.php:125
-#: visual-composer/event-openagenda.php:178
-msgid "Please add an OpenAgenda API Key in Settings / OpenAgenda Settings"
-msgstr ""
-"Veuillez ajouter un clé API OpenAgenda dans  \"Réglages / Réglages "
-"Openagenda\""
-
-#: visual-composer/openagenda-main.php:9
-msgid "Main Openagenda"
-msgstr "Openagenda Principal"
-
-#: visual-composer/openagenda-main.php:11
-msgid "Display Openagenda Script"
-msgstr "Affiche les scripts OpenAgenda"
-
-#: visual-composer/openagenda-main.php:23 visual-composer/visual-slide.php:53
-#: visual-composer/single-event-openagenda.php:23
-#: visual-composer/event-openagenda.php:23
-msgid "Add a word between % to add a different style. Only 1 allowed"
-msgstr ""
-"Ajoutez un mot entre % pour utiliser un style différent. Seulement une fois "
-"par titre"
-
-#: visual-composer/openagenda-main.php:33
-#: visual-composer/single-event-openagenda.php:33
-msgid "URL to Event"
-msgstr "URL vers l'évènement"
-
-#: visual-composer/openagenda-main.php:36
-msgid "URL to the OpenAgenda Agenda"
-msgstr "URL vers votre agenda OpenAgenda"
-
-#: visual-composer/openagenda-main.php:46
-msgid "Agenda Code"
-msgstr "Code OpenAgenda"
-
-#: visual-composer/openagenda-main.php:49
-msgid ""
-"OPenAgenda will give you an iframe code with this: data-oabdy "
-"src=\"//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr\". "
-"What you need is to copy/past the YYYYYYYY (8 digits) "
-msgstr ""
-"OpenAgenda va& vous fournir une iframe avec ce genre de code: data-oabdy "
-"src=\"//openagenda.com/agendas/XXXXXXXX/embeds/YYYYYYYY/events?lang=fr\". "
-"Vous devez copier/coller le YYYYYYYY (8 chiffres)"
-
-#: visual-composer/openagenda-main.php:59
-msgid "Widget Type"
-msgstr "Type de Widget"
-
-#: visual-composer/openagenda-main.php:62
-msgid "Please select an OpenAgenda Widget"
-msgstr "Veuillez sélectionner un widget OpenAgenda"
-
-#: visual-composer/openagenda-main.php:63
-msgid "General"
-msgstr "Général"
-
-#: visual-composer/openagenda-main.php:64
-msgid "Map"
-msgstr "Carte"
-
-#: visual-composer/openagenda-main.php:66
-msgid "Categories"
-msgstr "Catégories"
-
-#: visual-composer/openagenda-main.php:68
-msgid "Calendrier"
-msgstr "Calendrier"
-
-#: visual-composer/openagenda-main.php:69
-msgid "Preview Widget"
-msgstr "Widget de prévisualisation"
-
-#: visual-composer/openagenda-main.php:70
-msgid "localisation"
-msgstr "Localisation"
-
-#: visual-composer/openagenda-main.php:72
-msgid "Select the widget to display"
-msgstr "Choisissez le widget à afficher"
-
-#: visual-composer/openagenda-main.php:81
-msgid "Agenda page in your Website"
-msgstr "Page Agenta sur votre site"
-
-#: visual-composer/openagenda-main.php:83
-msgid "Select the page where the main agenda is"
-msgstr "Sélectionnez la page où se trouve l'agenda"
-
-#: visual-composer/visual-slide.php:26
-msgid "OpenAgenda Slider"
-msgstr "Slider OPenAgenda"
-
-#: visual-composer/visual-slide.php:28
-msgid "Display your openAgenda in a slider view"
-msgstr "Affiche Openagenda dans un slider"
-
-#: visual-composer/visual-slide.php:37
-msgid "Agenda Slug"
-msgstr "Identifiant de l'agenda"
-
-#: visual-composer/visual-slide.php:39
-msgid "my-agenda-slug"
-msgstr "mon-identifiant"
-
-#: visual-composer/visual-slide.php:40
-msgid ""
-"The Slug of your agenda in openagenda. For example, if your Openagenda URL "
-"is https://openagenda.com/my-great-calendar, then the slug is my-great-"
-"calendar"
-msgstr ""
-"L'identifiant de votre agenda dans Openagenda. Par exemple, si votre URL "
-"Openagenda est https://openagenda.com/my-great-calendar, alors l'identifiant "
-"est my-great-calendar"
-
-#: visual-composer/visual-slide.php:66 visual-composer/event-openagenda.php:36
-msgid "URL to Agenda. You must create a page integrating OpenAgenda"
-msgstr "URL vers l'agenda, vous devez créer une page intégrant OpenAgenda"
-
-#: visual-composer/visual-slide.php:76 visual-composer/visual-slide.php:78
-#: visual-composer/single-event-openagenda.php:46
-#: visual-composer/single-event-openagenda.php:48
-msgid "Link Text"
-msgstr "Texte du lien"
-
-#: visual-composer/visual-slide.php:79
-#: visual-composer/single-event-openagenda.php:49
-msgid "Text for the link"
-msgstr "Texte du Lien"
-
-#: visual-composer/visual-slide.php:89
-msgid "Color to Title"
-msgstr "Couleur du titre"
-
-#: visual-composer/visual-slide.php:92
-msgid "Select the color for the  title part between %"
-msgstr "Choisissez la couleur pour la partie du titre entre %"
-
-#: visual-composer/visual-slide.php:102
-msgid "Background color"
-msgstr "Couleur de fond"
-
-#: visual-composer/visual-slide.php:105
-msgid "Date Box background color"
-msgstr "Couleur de fond de l'encadré date"
-
-#: visual-composer/visual-slide.php:115
-msgid "text color"
-msgstr "Couleur du texte"
-
-#: visual-composer/visual-slide.php:118
-msgid "Date Box text color"
-msgstr "Couleur du texte de la boite date"
-
-#: visual-composer/visual-slide.php:128
-msgid "tag Filter"
-msgstr "Filtres par tags"
-
-#: visual-composer/visual-slide.php:131
-msgid "Tag Filter"
-msgstr "Filtres par tags"
-
-#: visual-composer/visual-slide.php:141 visual-composer/visual-slide.php:144
-msgid "Cat Filter"
-msgstr "Filtre par catégorie"
-
-#: visual-composer/visual-slide.php:154
-msgid "search"
-msgstr "Rechercher"
-
-#: visual-composer/visual-slide.php:157
-msgid "search Filter"
-msgstr "Filtre recherche"
-
-#: visual-composer/visual-slide.php:167
-msgid "Display venue"
-msgstr "Afficher le lieu"
-
-#: visual-composer/visual-slide.php:170
-msgid "Display Venue"
-msgstr "Afficher le lieu"
-
-#: visual-composer/visual-slide.php:289
-msgid "Sorry, no events found"
-msgstr "Désolé, aucun évènement trouvé"
-
-#: visual-composer/category-openagenda.php:9
-msgid "Category Openagenda"
-msgstr "Catégorie Openagenda"
-
-#: visual-composer/category-openagenda.php:11
-msgid "Display Category from Openagenda"
-msgstr "Afficher les catégorie d'OpenAgenda"
-
-#: visual-composer/single-event-openagenda.php:9
-msgid "Single Event Openagenda"
-msgstr "1 seul évènement OpenAgenda"
-
-#: visual-composer/single-event-openagenda.php:11
-msgid "Display 1 Event from Openagenda"
-msgstr "Affiche 1 évènement depuis Openagenda"
-
-#: visual-composer/single-event-openagenda.php:36
-msgid "URL to the event in OpenAgenda"
-msgstr "URL de l'évènement dans OpenAgenda"
-
-#: visual-composer/single-event-openagenda.php:58
-msgid ""
-"Event Link in Openagenda or in your website if you created a special agenda "
-"page"
-msgstr ""
-"Liens de l'évènement sur Openagenda ou votre site si vous avez créé une page "
-"spéciale"
-
-#: visual-composer/single-event-openagenda.php:71
-#: visual-composer/event-openagenda.php:108
-msgid "Options"
-msgstr "Options"
-
-#: visual-composer/single-event-openagenda.php:75
-#: visual-composer/event-openagenda.php:114
-msgid "City"
-msgstr "Ville"
-
-#: visual-composer/single-event-openagenda.php:76
-msgid "Description"
-msgstr "Description"
-
-#: visual-composer/single-event-openagenda.php:78
-#: visual-composer/event-openagenda.php:116
-msgid "Check the options to display"
-msgstr "Cochez les options à afficher"
-
-#: visual-composer/single-event-openagenda.php:180
-#: visual-composer/event-openagenda.php:292
-#, php-format
-msgid "On %s"
-msgstr "Le %s"
-
-#: visual-composer/single-event-openagenda.php:188
-#: visual-composer/event-openagenda.php:302
-#, php-format
-msgid "from %1s to %2s"
-msgstr "Du %1s au %2s"
-
-#: visual-composer/event-openagenda.php:9
-msgid "Event Openagenda"
-msgstr "Évènement OpenAgenda"
-
-#: visual-composer/event-openagenda.php:11
-msgid "Display Event from Openagenda"
-msgstr "Afficher un Évènement depuis OpenAgenda"
-
-#: visual-composer/event-openagenda.php:46
-#: visual-composer/event-openagenda.php:48
-msgid "Choose your layout"
-msgstr "Choisissez votre disposition"
-
-#: visual-composer/event-openagenda.php:71
-msgid "Categorie to display"
-msgstr "Catégorie à afficher"
-
-#: visual-composer/event-openagenda.php:73
-msgid ""
-"Choose the categorie to display. Only one category allowed. If you choose a "
-"Category, do not choose a Tag too"
-msgstr ""
-"Choisissez la catégorie à afficher. Une seule catégorie permise. Si vous "
-"choisissez une catégorie, ne choisissez pas de tags"
-
-#: visual-composer/event-openagenda.php:83
-msgid "Tag to display"
-msgstr "Tag à afficher"
-
-#: visual-composer/event-openagenda.php:85
-msgid ""
-"Choose the tag to display. Only one category allowed. If you choose a Tag, "
-"do not choose a Category too"
-msgstr ""
-"Choisissez le tag à afficher. Un seul tag permise. Si vous choisissez un tag,"
-" ne choisissez pas de catégorie"
-
-#: visual-composer/event-openagenda.php:95
-msgid "Nb of event"
-msgstr "Nombre d'évènement"
-
-#: visual-composer/event-openagenda.php:98
-msgid "Number of event to display"
-msgstr "Nombre d'évènement à afficher"
-
-#: visual-composer/event-openagenda.php:112
-msgid "Tag"
-msgstr "Tag"
-
-#: visual-composer/event-openagenda.php:201
-#: visual-composer/event-openagenda.php:218
-msgid "No events Found"
-msgstr "Aucun évènement trouvé"
-
 #: inc/class/class-openagenda-api.php:60
 msgid "You forgot to add a slug of agenda to retrieve"
 msgstr "Vous avez oublié d'ajouter une URL d'OpenAgenda"
-
-#: inc/class/class-openagenda-api.php:77 inc/class/class-openagenda-api.php:80
-msgid "Impossible to retrieve Events Data"
-msgstr "Impossible de récupérer les données des évènements"
-
-#. this is a link to add events in Openagenda.com.
-#: inc/class/class-openagenda-api.php:144
-#, php-format
-msgid "Have an Event to display here? <a href=\"%s\">Add it!</a>"
-msgstr "Ajouter votre évènement"
-
-#. Name of the plugin
-msgid "5P2P VC OpenAgenda"
-msgstr "5P2P VC OpenAgenda"
-
-#. Description of the plugin
-msgid ""
-"This plugin allows you to display an openagenda in your WP via a Visual "
-"Composer element"
-msgstr ""
-"Cette extension vous permet d'ajouter un agenda OpenAgenda grâce à un "
-"élément Visual Composer"
-
-#. Author of the plugin
-msgid "5P2P"
-msgstr "5P2P"
-
-#. Author URI of the plugin
-msgid "https://5pains-et-2poissons.fr/"
-msgstr "https://5pains-et-2poissons.fr/"
