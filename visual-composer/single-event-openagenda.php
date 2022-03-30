@@ -137,8 +137,8 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	$description = $event['html'][ $atts['lang'] ];
 	if ( ! empty( $description ) ) {
 		$description = explode( '<br />', $description );
-		$description = strip_tags( $description[0] );
-		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '</p>';
+		$description = substr( strip_tags( $description[0] ), 0, 180 );
+		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '...</p>';
 	}
 
 	/**
