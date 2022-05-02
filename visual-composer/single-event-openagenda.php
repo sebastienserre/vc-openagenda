@@ -146,21 +146,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	 */
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
 
-	$url = add_query_arg(
-		array(
-			'oaq' => array(
-				'uid' => $decoded_body['data']['uid'],
-
-			),
-		), $atts['event-link']['url'] );
-
-	if ( $atts['event-link']['target'] == ' _blank' ) {
-		$target = 'target="_blank"';
-	}
-	if ( $atts['event-link']['rel'] == 'nofollow' ) {
-		$rel = 'rel="nofollow"';
-	}
-
 	$img_size = get_image_size( 'featured-post' );
 
 	if ( empty( $atts['title'] ) ) {
@@ -173,8 +158,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	ob_start();
 
-	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $target = '', $rel = '', $event, $url,
-		$img_size, $decoded_body );
+	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $event, $img_size, $decoded_body );
 
 	return ob_get_clean();
 
@@ -183,32 +167,40 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 add_shortcode( 'p2p5-vc-openagenda-single-event', 'p2p5_vc_retrieve_info_single' );
 
 function p2p5_vc_display_single(
-	$atts, $city, $date, $cat, $description, $target, $rel, $event, $url,
-	$img_size, $decoded_body
-) { ?>
+	$atts, $city, $date, $cat, $description, $event, $img_size, $decoded_body
+) {
+	if ( $atts['event-link']['target'] == ' _blank' ) {
+		$target = 'target="_blank"';
+	}
+
+	if ( $atts['event-link']['rel'] == 'nofollow' ) {
+		$rel = 'rel="nofollow"';
+	}
+
+	?>
     <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
         <div class="p2p5-vc-element-openagenda-picture left">
-            <a href="<?php echo $url ?>" <?php echo $target . $rel; ?> ><img
+            <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> ><img
                         src="<?php echo $event["image"] ?>"
                         width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>>
             </a>
         </div>
         <div class="p2p5-vc-element-openagenda-details right">
 			<?php
-			echo '<h2><a href="' . $url . '"' . $target . $rel . '>' . $atts['title'] . '</a></h2>';
+			echo '<h2><a href="' . $atts['event-link']['url'] . '"' . $target . $rel . '>' . $atts['title'] . '</a></h2>';
 			echo $city;
 			echo $date;
 			echo $cat;
 			?>
 
             <h2 class="p2p5-vc-element-openagenda-details-title">
-                <a href="<?php echo $url ?>" <?php echo $target . $rel; ?> >
+                <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> >
 					<?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?>
                 </a>
             </h2>
 			<?php echo $description ?>
         </div>
-        <a href="<?php echo $url ?>" <?php echo $target . $rel; ?>
+        <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?>
            class="p2p5-vc-element-openagenda-details-readmore ">
 			<?php echo $atts['agenda_text'] ?>
         </a>
