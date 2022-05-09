@@ -169,7 +169,7 @@ add_shortcode( 'p2p5-vc-openagenda-single-event', 'p2p5_vc_retrieve_info_single'
 function p2p5_vc_display_single(
 	$atts, $city, $date, $cat, $description, $event, $img_size, $decoded_body
 ) {
-	if ( $atts['event-link']['target'] == ' _blank' ) {
+	if ( $atts['event-link']['target'] == '_blank' ) {
 		$target = 'target="_blank"';
 	}
 
