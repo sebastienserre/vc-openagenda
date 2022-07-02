@@ -160,7 +160,7 @@ function p2p5_vc_display_single(
 
 	?>
     <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
-        <div class="p2p5-vc-element-openagenda-picture">
+        <div class="p2p5-vc-element-openagenda-picture left">
             <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> ><img
                         src="<?php echo $event["image"] ?>"
                         width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>>
