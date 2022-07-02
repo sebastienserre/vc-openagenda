@@ -28,19 +28,6 @@ function p2p5_vc_openagenda_single_event() {
 
 				array(
 					'type'        => 'textfield',
-					'holder'      => 'a',
-					'class'       => 'url-class',
-					'heading'     => __( 'URL to Event', 'vc-openagenda' ),
-					'param_name'  => 'agenda_url',
-					'value'       => esc_url( site_url() ),
-					'description' => __( 'URL to the event in OpenAgenda', 'vc-openagenda' ),
-					'admin_label' => false,
-					'weight'      => 0,
-					'group'       => __( 'Settings', 'vc-openagenda' ),
-				),
-
-				array(
-					'type'        => 'textfield',
 					'holder'      => 'p',
 					'class'       => 'title-class',
 					'heading'     => __( 'Link Text', 'vc-openagenda' ),
@@ -73,17 +60,16 @@ add_action( 'init', 'p2p5_vc_openagenda_single_event' );
 
 function p2p5_vc_retrieve_info_single( $atts ) {
 	$atts = shortcode_atts( array(
-		'agenda_url'  => '',
 		'title'       => '',
 		'agenda_text' => '',
 		'event-link'  => '',
-
-
 	),
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
+	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
+    $atts['agenda_url'] = $atts['event-link']['url'];
 
-	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?lang=[a-z]*)/';
+	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 	if ( empty( $matches ) ) {
 		$re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
@@ -92,8 +78,8 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	$slug = untrailingslashit( $matches[1][0] );
 
-	$re = '/\?lang=([a-z]*)/';
-	preg_match( $re, $matches[2][0], $langs, PREG_OFFSET_CAPTURE, 0 );
+	$re = '/lang=([a-z]*)/';
+	preg_match( $re, $atts['agenda_url'], $langs, PREG_OFFSET_CAPTURE, 0 );
 	$atts['lang'] = 'fr';
 	if ( ! empty( $langs ) ) {
 		$atts['lang'] = $langs[1][0];
@@ -141,11 +127,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '...</p>';
 	}
 
-	/**
-	 * create link readmore
-	 */
-	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
-
 	$img_size = get_image_size( 'featured-post' );
 
 	if ( empty( $atts['title'] ) ) {
@@ -179,7 +160,7 @@ function p2p5_vc_display_single(
 
 	?>
     <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
-        <div class="p2p5-vc-element-openagenda-picture left">
+        <div class="p2p5-vc-element-openagenda-picture">
             <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> ><img
                         src="<?php echo $event["image"] ?>"
                         width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>>
