@@ -77,13 +77,11 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		'title'       => '',
 		'agenda_text' => '',
 		'event-link'  => '',
-
-
 	),
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
 
-	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?lang=[a-z]*)/';
+	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 	if ( empty( $matches ) ) {
 		$re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
@@ -92,8 +90,8 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	$slug = untrailingslashit( $matches[1][0] );
 
-	$re = '/\?lang=([a-z]*)/';
-	preg_match( $re, $matches[2][0], $langs, PREG_OFFSET_CAPTURE, 0 );
+	$re = '/lang=([a-z]*)/';
+	preg_match( $re, $atts['agenda_url'], $langs, PREG_OFFSET_CAPTURE, 0 );
 	$atts['lang'] = 'fr';
 	if ( ! empty( $langs ) ) {
 		$atts['lang'] = $langs[1][0];
