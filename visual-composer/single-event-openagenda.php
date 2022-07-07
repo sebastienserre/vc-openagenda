@@ -25,6 +25,18 @@ function p2p5_vc_openagenda_single_event() {
 					'weight'      => 0,
 					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
+				array(
+					'type'        => 'textfield',
+					'holder'      => 'h3',
+					'class'       => 'title-class',
+					'heading'     => __( 'OpenAgenda URL', '5p2p-vc-media-text' ),
+					'param_name'  => 'agenda_url',
+					'value'       => __( 'OpenAgenda URL', '5p2p-vc-media-text' ),
+					'description' => __( '', '5p2p-vc-media-text' ),
+					'admin_label' => false,
+					'weight'      => 0,
+					'group'       => __( 'Settings', '5p2p-vc-media-text' ),
+				),
 
 				array(
 					'type'        => 'textfield',
@@ -63,11 +75,15 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		'title'       => '',
 		'agenda_text' => '',
 		'event-link'  => '',
+        'agenda_url' => '',
 	),
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
-    $atts['agenda_url'] = $atts['event-link']['url'];
+/*
+    if ( empty( $atts['agenda_url'] ) ){
+	    $atts['agenda_url'] = $atts['event-link']['url'];
+    }*/
 
 	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
@@ -161,7 +177,13 @@ function p2p5_vc_display_single(
 	if ( $atts['event-link']['rel'] == 'nofollow' ) {
 		$rel = 'rel="nofollow"';
 	}
-
+    if (empty( $atts['agenda_url'] ) ){
+        ?>
+            <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda error">
+                <p><?php esc_html_e('Please set an OpenAgenda URL', 'vc-openagenda'); ?></p>
+            </div>
+            <?php
+    } else {
 	?>
     <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
         <div class="p2p5-vc-element-openagenda-picture left">
@@ -191,4 +213,5 @@ function p2p5_vc_display_single(
         </a>
     </div>
 	<?php
+    }
 }

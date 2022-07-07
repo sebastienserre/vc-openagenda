@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: 5P2P VC OpenAgenda\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-04 16:28+0000\n"
-"PO-Revision-Date: 2022-03-30 05:58+0000\n"
+"PO-Revision-Date: 2022-07-07 18:09+0000\n"
 "Last-Translator: sebastienserre <sebastien@5p2p.fr>\n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -210,7 +210,7 @@ msgstr "Afficher votre barre de recherche OpenAgenda dans WordPress"
 msgid "Event Link"
 msgstr "Lien vers l'évènement"
 
-#: visual-composer/single-event-openagenda.php:58
+#: visual-composer/single-event-openagenda.php:57
 msgid ""
 "Event Link in Openagenda or in your website if you created a special agenda "
 "page"
@@ -235,7 +235,7 @@ msgstr ""
 msgid "fr"
 msgstr "fr"
 
-#: visual-composer/single-event-openagenda.php:130
+#: visual-composer/single-event-openagenda.php:136
 #: visual-composer/event-openagenda.php:561
 #, php-format
 msgid "from %1s to %2s"
@@ -268,8 +268,8 @@ msgid "Impossible to retrieve Events Data"
 msgstr "Impossible de récupérer les données des évènements"
 
 #: visual-composer/visual-slide.php:76 visual-composer/visual-slide.php:78
-#: visual-composer/single-event-openagenda.php:46
-#: visual-composer/single-event-openagenda.php:48
+#: visual-composer/single-event-openagenda.php:45
+#: visual-composer/single-event-openagenda.php:47
 msgid "Link Text"
 msgstr "Texte du lien"
 
@@ -314,7 +314,7 @@ msgstr "Aucun évènement trouvé"
 msgid "Number of event to display"
 msgstr "Nombre d'évènement à afficher"
 
-#: visual-composer/single-event-openagenda.php:122
+#: visual-composer/single-event-openagenda.php:128
 #: visual-composer/event-openagenda.php:563
 #, php-format
 msgid "On %s"
@@ -350,11 +350,15 @@ msgstr "Options"
 msgid "Please select an OpenAgenda Widget"
 msgstr "Veuillez sélectionner un widget OpenAgenda"
 
+#: visual-composer/single-event-openagenda.php:183
+msgid "Please set an OpenAgenda URL"
+msgstr "Veuillez renseigner une URL OpenAgenda"
+
 #: visual-composer/openagenda-main.php:69
 msgid "Preview Widget"
 msgstr "Widget de prévisualisation"
 
-#: visual-composer/single-event-openagenda.php:171
+#: visual-composer/single-event-openagenda.php:157
 msgid "Read more"
 msgstr "Lire la suite"
 
@@ -409,9 +413,8 @@ msgstr "Choisissez le widget à afficher"
 #: visual-composer/category-openagenda.php:26
 #: visual-composer/category-openagenda.php:38
 #: visual-composer/single-event-openagenda.php:26
-#: visual-composer/single-event-openagenda.php:39
-#: visual-composer/single-event-openagenda.php:52
-#: visual-composer/single-event-openagenda.php:64
+#: visual-composer/single-event-openagenda.php:51
+#: visual-composer/single-event-openagenda.php:63
 #: visual-composer/event-openagenda.php:26
 #: visual-composer/event-openagenda.php:39
 #: visual-composer/event-openagenda.php:52
@@ -466,7 +469,7 @@ msgid "text color"
 msgstr "Couleur du texte"
 
 #: visual-composer/visual-slide.php:79
-#: visual-composer/single-event-openagenda.php:49
+#: visual-composer/single-event-openagenda.php:48
 msgid "Text for the link"
 msgstr "Texte du Lien"
 
@@ -517,13 +520,8 @@ msgid "URL to Agenda. You must create a page integrating OpenAgenda"
 msgstr "URL vers l'agenda, vous devez créer une page intégrant OpenAgenda"
 
 #: visual-composer/openagenda-main.php:33
-#: visual-composer/single-event-openagenda.php:33
 msgid "URL to Event"
 msgstr "URL vers l'évènement"
-
-#: visual-composer/single-event-openagenda.php:36
-msgid "URL to the event in OpenAgenda"
-msgstr "URL de l'évènement dans OpenAgenda"
 
 #: visual-composer/openagenda-main.php:36
 msgid "URL to the OpenAgenda Agenda"

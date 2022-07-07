@@ -376,3 +376,9 @@ https://saint-jodard.fdsj.fr/agenda/
 .page-template-page-gmap #agenda header {
 	padding: 0 0 !important;
 }
+
+.p2p5-vc-element-openagenda-single.hor.p2p5-vc-element-openagenda.error {
+	background: #f1f1f1;
+	border-left: red 0.5em solid;
+	padding: 10px;
+}
