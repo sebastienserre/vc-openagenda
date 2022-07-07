@@ -98,7 +98,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	}
 
 	$oa           = new OpenAgendaApi();
-	$decoded_body = $oa->thfo_openwp_retrieve_data( $slug, 200 );
+	$decoded_body = $oa->thfo_openwp_retrieve_data( $slug, 200, 1 );
 	$event        = array();
 
 	foreach ( $decoded_body['events'] as $event_key => $events ) {

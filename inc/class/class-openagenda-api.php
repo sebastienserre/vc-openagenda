@@ -55,7 +55,7 @@ class OpenAgendaApi {
 	 *
 	 * @return array|mixed|object|string
 	 */
-	public function thfo_openwp_retrieve_data( $slug, $nb = 10 ) {
+	public function thfo_openwp_retrieve_data( $slug, $nb = 10, $past = 0 ) {
 		if ( empty( $slug ) ) {
 			return '<p>' . __( 'You forgot to add a slug of agenda to retrieve', 'vc-openagenda' ) . '</p>';
 		}
@@ -67,7 +67,7 @@ class OpenAgendaApi {
 		$uid = $this->openwp_get_uid( $slug );
 		if ( $uid ) {
 
-			$url          = 'https://openagenda.com/agendas/' . $uid . '/events.json?key=' . $key . '&limit=' . $nb;
+			$url          = 'https://openagenda.com/agendas/' . $uid . '/events.json?key=' . $key . '&limit=' . $nb . '&oaq[passed]='. $past;
 			$response     = wp_remote_get( $url );
 			$decoded_body = array();
 
