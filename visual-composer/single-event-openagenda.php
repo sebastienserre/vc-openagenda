@@ -103,12 +103,16 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	 * Several form according lenght of event (1 or more days)
 	 */
 
-	if ( $start == $end ) {
+    // check if same day
+    $day_start = date_i18n( 'd', $start );
+    $day_end = date_i18n( 'd', $end );
+
+	if ( $day_start === $day_end ) {
 		$date = date_i18n( 'd F', $start );
 		$date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'On %s', 'vc-openagenda' ), $date ) . '</p>';
 	}
 
-	if ( $start != $end ) {
+	if ( $day_start !== $day_end ) {
 
 		$start = date_i18n( 'd F', $start );
 		$end   = date_i18n( 'd F', $end );
