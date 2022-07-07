@@ -80,10 +80,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
-/*
-    if ( empty( $atts['agenda_url'] ) ){
-	    $atts['agenda_url'] = $atts['event-link']['url'];
-    }*/
 
 	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
@@ -177,10 +173,10 @@ function p2p5_vc_display_single(
 	if ( $atts['event-link']['rel'] == 'nofollow' ) {
 		$rel = 'rel="nofollow"';
 	}
-    if (empty( $atts['agenda_url'] ) ){
+    if ( empty( $atts['agenda_url'] ) || empty( $event ) ){
         ?>
             <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda error">
-                <p><?php esc_html_e('Please set an OpenAgenda URL', 'vc-openagenda'); ?></p>
+                <p><?php esc_html_e('Please set an OpenAgenda URL or check your event on OpenAgenda (dates)', 'vc-openagenda'); ?></p>
             </div>
             <?php
     } else {

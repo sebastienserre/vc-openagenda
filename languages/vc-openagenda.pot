@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-07 18:08+0000\n"
+"POT-Creation-Date: 2022-07-07 18:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -215,7 +215,7 @@ msgstr ""
 msgid "fr"
 msgstr ""
 
-#: visual-composer/single-event-openagenda.php:136
+#: visual-composer/single-event-openagenda.php:132
 #: visual-composer/event-openagenda.php:561
 #, php-format
 msgid "from %1s to %2s"
@@ -294,7 +294,7 @@ msgstr ""
 msgid "Number of event to display"
 msgstr ""
 
-#: visual-composer/single-event-openagenda.php:128
+#: visual-composer/single-event-openagenda.php:124
 #: visual-composer/event-openagenda.php:563
 #, php-format
 msgid "On %s"
@@ -327,15 +327,15 @@ msgstr ""
 msgid "Please select an OpenAgenda Widget"
 msgstr ""
 
-#: visual-composer/single-event-openagenda.php:183
-msgid "Please set an OpenAgenda URL"
+#: visual-composer/single-event-openagenda.php:179
+msgid "Please set an OpenAgenda URL or check your event on OpenAgenda (dates)"
 msgstr ""
 
 #: visual-composer/openagenda-main.php:69
 msgid "Preview Widget"
 msgstr ""
 
-#: visual-composer/single-event-openagenda.php:157
+#: visual-composer/single-event-openagenda.php:153
 msgid "Read more"
 msgstr ""
 
