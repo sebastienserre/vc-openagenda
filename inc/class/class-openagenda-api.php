@@ -239,8 +239,24 @@ class OpenAgendaApi {
 		return $slugs;
 	}
 
-	public function openwp_get_location(){
+	public function format_date( $start, $end ){
+		// check if same day
+		$day_start = date_i18n( 'd', $start );
+		$day_end = date_i18n( 'd', $end );
 
+		if ( $day_start === $day_end ) {
+			$date = date_i18n( 'd F', $start );
+			$date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'On %s', 'vc-openagenda' ), $date ) . '</p>';
+		}
+
+		if ( $day_start !== $day_end ) {
+
+			$start = date_i18n( 'd F', $start );
+			$end   = date_i18n( 'd F', $end );
+
+			$date = '<p class="p2p5-vc-element-openagenda-details-date">' . sprintf( __( 'from %1s to %2s', 'vc-openagenda' ), $start, $end ) . '</p>';
+		}
+        return $date;
 	}
 
 }
