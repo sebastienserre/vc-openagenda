@@ -100,11 +100,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		}
 	}
 
-	$nb_day = sizeof( $event['timings'] );
-	$start  = strtotime( $event['timings'][0]['start'] );
-	$end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
-
-    $date = $oa->format_date( $start, $end );
+    $date = $oa->format_date( $event );
 	$city = $event['location']['city'];
 	if ( ! empty( $city ) ) {
 		$city = '<p class="p2p5-vc-element-openagenda-details-city">' . $city . '</p>';

@@ -239,7 +239,12 @@ class OpenAgendaApi {
 		return $slugs;
 	}
 
-	public function format_date( $start, $end ){
+	public function format_date( $event ){
+
+		$nb_day = sizeof( $event['timings'] );
+		$start  = strtotime( $event['timings'][0]['start'] );
+		$end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
+
 		// check if same day
 		$day_start = date_i18n( 'd', $start );
 		$day_end = date_i18n( 'd', $end );
