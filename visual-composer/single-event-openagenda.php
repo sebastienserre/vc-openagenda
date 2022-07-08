@@ -71,6 +71,7 @@ function p2p5_vc_openagenda_single_event() {
 add_action( 'init', 'p2p5_vc_openagenda_single_event' );
 
 function p2p5_vc_retrieve_info_single( $atts ) {
+	$oa           = new OpenAgendaApi();
 	$atts = shortcode_atts( array(
 		'title'       => '',
 		'agenda_text' => '',
@@ -81,14 +82,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	);
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
 
-	$re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
-	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
-	if ( empty( $matches ) ) {
-		$re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
-		preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
-	}
-
-	$slug = untrailingslashit( $matches[1][0] );
+    $slug = $oa->get_slug( $atts['agenda_url'] );
 
 	$re = '/lang=([a-z]*)/';
 	preg_match( $re, $atts['agenda_url'], $langs, PREG_OFFSET_CAPTURE, 0 );
@@ -97,7 +91,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$atts['lang'] = $langs[1][0];
 	}
 
-	$oa           = new OpenAgendaApi();
 	$decoded_body = $oa->thfo_openwp_retrieve_data( $slug, 200, 1 );
 	$event        = array();
 

@@ -259,6 +259,17 @@ class OpenAgendaApi {
         return $date;
 	}
 
+    public function get_slug( $url ){
+	    $re = '/events\/([a-zA-Z\.\/:\0-_9]*)(\?\S)/';
+	    preg_match( $re, $url, $matches, PREG_OFFSET_CAPTURE, 0 );
+	    if ( empty( $matches ) ) {
+		    $re = '/events\/([a-zA-Z\.\/:\0-_9]*)/';
+		    preg_match( $re, $url, $matches, PREG_OFFSET_CAPTURE, 0 );
+	    }
+
+	    return untrailingslashit( $matches[1][0] );
+    }
+
 }
 
 new OpenAgendaApi();
