@@ -342,7 +342,7 @@ class OpenAgendaApi {
 	public function format_date( $event ){
 
 		$nb_day = sizeof( $event['timings'] );
-		$start  = strtotime( $event['timings'][0]['start'] );
+		$start  = strtotime( $event['timings'][0]['begin'] );
 		$end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
 
 		// check if same day
