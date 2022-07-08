@@ -82,7 +82,9 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 	);
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
 
-    $slug = $oa->get_slug( $atts['agenda_url'] );
+  //  $agenda_slug = $oa->get_slug( $atts['agenda_url'], true);
+
+    $slug = $oa->get_event_slug( $atts['agenda_url'] );
 
 	$re = '/lang=([a-z]*)/';
 	preg_match( $re, $atts['agenda_url'], $langs, PREG_OFFSET_CAPTURE, 0 );
@@ -91,14 +93,10 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$atts['lang'] = $langs[1][0];
 	}
 
-	$decoded_body = $oa->thfo_openwp_retrieve_data( $slug, 200, 1 );
+	$decoded_body = $oa->thfo_openwp_retrieve_data( $atts['agenda_url'] , 0, 0 , true);
 	$event        = array();
 
-	foreach ( $decoded_body['events'] as $event_key => $events ) {
-		if ( $slug === $events['slug'] ) {
-			$event = $decoded_body['events'][ $event_key ];
-		}
-	}
+	$event = $decoded_body['event'];
 
     $date = $oa->format_date( $event );
 	$city = $event['location']['city'];
@@ -106,12 +104,14 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$city = '<p class="p2p5-vc-element-openagenda-details-city">' . $city . '</p>';
 	}
 
-	$description = $event['html'][ $atts['lang'] ];
+	$description = $event['description'][ $atts['lang'] ];
 	if ( ! empty( $description ) ) {
 		$description = explode( '<br />', $description );
 		$description = substr( strip_tags( $description[0] ), 0, 180 );
 		$description = '<p class="p2p5-vc-element-openagenda-details-description">' . $description . '...</p>';
 	}
+
+    $image = $oa->get_image( $event['image']);
 
 	$img_size = get_image_size( 'featured-post' );
 
@@ -125,7 +125,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	ob_start();
 
-	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $event, $img_size, $decoded_body );
+	p2p5_vc_display_single( $atts, $city, $date, $cat = '', $description, $event, $img_size, $decoded_body, $image );
 
 	return ob_get_clean();
 
@@ -133,9 +133,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 add_shortcode( 'p2p5-vc-openagenda-single-event', 'p2p5_vc_retrieve_info_single' );
 
-function p2p5_vc_display_single(
-	$atts, $city, $date, $cat, $description, $event, $img_size, $decoded_body
-) {
+function p2p5_vc_display_single( $atts, $city, $date, $cat, $description, $event, $img_size, $decoded_body, $image ) {
 	if ( $atts['event-link']['target'] == '_blank' ) {
 		$target = 'target="_blank"';
 	}
@@ -154,7 +152,7 @@ function p2p5_vc_display_single(
     <div class="p2p5-vc-element-openagenda-single hor p2p5-vc-element-openagenda">
         <div class="p2p5-vc-element-openagenda-picture left">
             <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> ><img
-                        src="<?php echo $event["image"] ?>"
+                        src="<?php echo $image; ?>"
                         width=<?php echo $img_size['width'] ?> height=<?php echo $img_size['height'] ?>>
             </a>
         </div>
