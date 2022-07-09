@@ -134,7 +134,9 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 add_shortcode( 'p2p5-vc-openagenda-single-event', 'p2p5_vc_retrieve_info_single' );
 
 function p2p5_vc_display_single( $atts, $city, $date, $cat, $description, $event, $img_size, $decoded_body, $image ) {
-	if ( $atts['event-link']['target'] == '_blank' ) {
+	$target = '';
+	$rel = '';
+    if ( $atts['event-link']['target'] == '_blank' ) {
 		$target = 'target="_blank"';
 	}
 
@@ -166,7 +168,7 @@ function p2p5_vc_display_single( $atts, $city, $date, $cat, $description, $event
 
             <h2 class="p2p5-vc-element-openagenda-details-title">
                 <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> >
-					<?php echo $decoded_body['data']['title'][ $atts['lang'] ]; ?>
+					<?php echo $event['title'][ $atts['lang'] ]; ?>
                 </a>
             </h2>
 			<?php echo $description ?>
