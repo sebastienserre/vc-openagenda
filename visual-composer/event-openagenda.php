@@ -603,6 +603,14 @@ add_shortcode( 'p2p5-vc-openagenda', 'p2p5_vc_retrieve_info' );
 
 function p2p5_vc_display( $atts, $event, $city, $date, $cat, $target, $rel, $url ) { ?>
 
+    <?php
+    // Polylang Compat
+    $lang = 'fr';
+    if ( function_exists( 'pll_current_language' ) ){
+        $lang = pll_current_language();
+    }
+    ?>
+
     <div class="p2p5-vc-element-openagenda-single <?php if ( $atts['openagenda_layout'] == 'hor' ) {
 		echo 'hor';
 	} else {
@@ -639,7 +647,7 @@ function p2p5_vc_display( $atts, $event, $city, $date, $cat, $target, $rel, $url
 
             <h3 class="p2p5-vc-element-openagenda-details-title"><a
                         href="<?php echo $url ?>" <?php echo $target . $rel; ?>
-                        class="prefix-no-arrow"><?php echo $event['title']['fr']; ?></a></h3>
+                        class="prefix-no-arrow"><?php echo $event['title'][$lang]; ?></a></h3>
         </div>
 
     </div>
