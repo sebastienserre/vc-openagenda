@@ -102,6 +102,7 @@ function p2p5_vc_openagenda_main( $atts ) {
 		'agenda_code'     => '',
 		'openagenda_type' => 'nothing',
 		'openagenda_url'  => '',
+        'tags' => '',
         ),
 		$atts, 'p2p5-vc-openagenda-main'
 	);
@@ -126,7 +127,7 @@ function p2p5_vc_openagenda_main( $atts ) {
 		switch ( $atts['openagenda_type'] ) {
 			case 'general':
 				?>
-				<iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/<?php echo $uid ?>/embeds/<?php echo $widget?>/events?lang=fr"></iframe><script type="text/javascript" src="//openagenda.com/js/embed/cibulBodyWidget.js"></script>
+				<iframe style="width:100%;" frameborder="0" scrolling="no" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="//openagenda.com/agendas/<?php echo $uid ?>/embeds/<?php echo $widget?>/events?lang=fr&oaq%5Btags%5D%5B0%5D=<?php echo $atts['tags'];?>"></iframe><script type="text/javascript" src="//openagenda.com/js/embed/cibulBodyWidget.js"></script>
 				<?php
 				break;
 			case 'map':
