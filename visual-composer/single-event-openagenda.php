@@ -161,16 +161,13 @@ function p2p5_vc_display_single( $atts, $city, $date, $cat, $description, $event
         <div class="p2p5-vc-element-openagenda-details right">
 			<?php
 			echo '<h2><a href="' . $atts['event-link']['url'] . '"' . $target . $rel . '>' . $atts['title'] . '</a></h2>';
+            echo '<div>';
 			echo $city;
 			echo $date;
 			echo $cat;
+            echo '</div>';
 			?>
 
-            <h2 class="p2p5-vc-element-openagenda-details-title">
-                <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?> >
-					<?php echo $event['title'][ $atts['lang'] ]; ?>
-                </a>
-            </h2>
 			<?php echo $description ?>
         </div>
         <a href="<?php echo $atts['event-link']['url'] ?>" <?php echo $target . $rel; ?>
