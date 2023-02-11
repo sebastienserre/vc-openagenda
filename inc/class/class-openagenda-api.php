@@ -375,6 +375,7 @@ class OpenAgendaApi {
 	    return untrailingslashit( $matches[1][0] );
     }
 
+
 }
 
 new OpenAgendaApi();

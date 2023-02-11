@@ -24,6 +24,7 @@
 
 	add_action( 'plugins_loaded', 'p2p5_vc_openagenda_load_files' );
 	function p2p5_vc_openagenda_load_files() {
+		include_once plugin_dir_path( __FILE__ ) . '/inc/helpers.php';
 		include_once plugin_dir_path( __FILE__ ) . '/inc/class/class-openagenda-api.php';
 		include_once plugin_dir_path( __FILE__ ) . '/admin/register_settings.php';
 		include_once plugin_dir_path( __FILE__ ) . '/visual-composer/visual-slide.php';
