@@ -601,7 +601,7 @@ function p2p5_vc_retrieve_info( $atts ) {
 
 add_shortcode( 'p2p5-vc-openagenda', 'p2p5_vc_retrieve_info' );
 
-function p2p5_vc_display( $atts, $event, $city, $date, $cat, $target, $rel, $url ) { ?>
+function p2p5_vc_display( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='' ) { ?>
 
     <?php
     // Polylang Compat
