@@ -62,6 +62,18 @@ function p2p5_vc_openagenda_single_event() {
 					'weight'      => 0,
 					'group'       => __( 'Settings', 'vc-openagenda' ),
 				),
+				array(
+					'type'        => 'dropdown',
+					'holder'      => 'p',
+					'class'       => 'layout-mission',
+					'heading'     => __( 'Choose your layout', 'vc-openagenda' ),
+					'param_name'  => 'openagenda_layout',
+					'description' => __( 'Choose your layout', 'vc-openagenda' ),
+					'admin_label' => false,
+					'value'       => array( 'Horizontal' => 'hor', 'Vertical' => 'ver' ),
+					'weight'      => 0,
+					'group'       => __( 'Settings', 'vc-openagenda' ),
+				),
 			),
 		)
 	);
@@ -77,7 +89,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		'agenda_text' => '',
 		'event-link'  => '',
         'agenda_url' => '',
-		'openagenda_layout' => 'ver',
+		'openagenda_layout' => 'hor',
 	),
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
