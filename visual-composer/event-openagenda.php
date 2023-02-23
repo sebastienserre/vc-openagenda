@@ -610,7 +610,7 @@ function p2p5_vc_display( $atts, $event, $city, $date, $cat='', $target='', $rel
         $lang = pll_current_language();
     }
 	if ( $atts['openagenda_layout'] == 'ver' ) {
-        vc_oa_display_ver( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='', $lang);
+        vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url='', $lang);
 	} else {
 		vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='', $lang);
 
@@ -645,10 +645,11 @@ function vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $r
     <?php
 }
 
-function vc_oa_display_ver( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='', $lang ){
+function vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url='', $lang ){
 
 	?>
     <div class="p2p5-vc-element-openagenda-single ver">
+	    <?php echo $cat; ?>
         <div class="p2p5-vc-element-openagenda-picture top">
             <a href="<?php echo $url ?>" <?php echo $target . $rel; ?>
                class="prefix-no-arrow">
@@ -658,7 +659,6 @@ function vc_oa_display_ver( $atts, $event, $city, $date, $cat='', $target='', $r
         <div class="p2p5-vc-element-openagenda-details bottom">
 			<?php echo $date ?>
 			<?php echo $city ?>
-			<?php echo $cat; ?>
             <h3 class="p2p5-vc-element-openagenda-details-title"><a
                         href="<?php echo $url ?>" <?php echo $target . $rel; ?>
                         class="prefix-no-arrow"><?php echo $event['title'][ $lang ]; ?></a>
