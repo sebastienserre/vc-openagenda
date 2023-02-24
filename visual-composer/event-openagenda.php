@@ -610,9 +610,9 @@ function p2p5_vc_display( $atts, $event, $city, $date, $cat='', $target='', $rel
         $lang = pll_current_language();
     }
 	if ( $atts['openagenda_layout'] == 'ver' ) {
-        vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url='', $lang);
+        vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url, $lang);
 	} else {
-		vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='', $lang);
+		vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url, $lang);
 
 	}
 }
