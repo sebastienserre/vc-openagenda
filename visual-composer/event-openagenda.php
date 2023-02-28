@@ -432,9 +432,6 @@ function p2p5_vc_retrieve_info( $atts ) {
 
 	preg_match( $re, $atts['agenda_url'], $matches, PREG_OFFSET_CAPTURE, 0 );
 
-	$slug = untrailingslashit( $matches[1][0] );
-
-	$key = get_option( 'openagenda_api' );
 	$uid = get_option( 'openagenda_uid' );
 
 	if ( $uid ) {
@@ -639,6 +636,10 @@ function vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $r
 			<p style="clear: both" ">
                 <?php echo $event['description'][$lang]; ?>
             </p>
+            <a class="readmore"
+               href="<?php echo $url ?>"><?php echo $atts['agenda_text']; ?>
+            </a>
+
         </div>
 
     </div>

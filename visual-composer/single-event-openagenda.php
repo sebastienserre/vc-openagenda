@@ -139,7 +139,7 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
 	ob_start();
 
-	p2p5_vc_display( $atts, $event, $city, $date, $cat, '', '', $atts['agenda_url'] );
+	p2p5_vc_display( $atts, $event, $city, $date, $cat, '', '', $atts['event-link']['url'] );
 
 	return ob_get_clean();
 

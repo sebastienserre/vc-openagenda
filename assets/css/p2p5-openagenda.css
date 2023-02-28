@@ -383,3 +383,7 @@ https://saint-jodard.fdsj.fr/agenda/
 	border-left: red 0.5em solid;
 	padding: 10px;
 }
+
+a.readmore {
+	float: right;
+}
