@@ -110,6 +110,8 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 	 * create link to event
 	 */
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
+    $target = '';
+    $rel = '';
 
     if ( is_array( $atts['event-link'] ) ) {
 	    if ( $atts['event-link']['target'] == ' _blank' ) {
@@ -155,6 +157,7 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 	echo '<div class="p2p5-vc-element-openagenda-categ"><ul>';
 
 	foreach ( $new_tag_list as $key => $value ) {
+        $class = '';
 		if ( $key === $atts['background'] ) {
 			$class = 'no-bg';
 		}
