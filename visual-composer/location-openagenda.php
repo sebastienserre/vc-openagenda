@@ -79,8 +79,10 @@ function openagenda_location( $atts ) {
 		$locations[ $event['locationUid'] ] = $event['locationName'];
 	}
 
-	$locations = array_unique( $locations );
-	asort( $locations );
+    if ( is_array( $locations ) ) {
+	    $locations = array_unique( $locations );
+	    asort( $locations );
+    }
 
 	if ( 'list' === $atts['layout'] ) {
 		return openagenda_location_list_html( $locations, $atts );
