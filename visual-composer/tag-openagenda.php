@@ -109,7 +109,12 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 	/**
 	 * create link to event
 	 */
-	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
+	//$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
+    if ( ! empty( $atts['event-link'] ) ){
+        $atts['event-link'] = vc_build_link( $atts['event-link'] );
+    }
+
+
     $target = '';
     $rel = '';
 
@@ -124,8 +129,6 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 
 	$group = array();
 	foreach ( $events as $event ) {
-
-
 		foreach ( $event['tagGroups'] as $tagGroup ) {
 
 			if ( empty( $group[ $tagGroup['slug'] ] ) ) {
@@ -170,6 +173,7 @@ function p2p5_vc_display_openagenda_tag( $atts ) {
 				<?php
 				foreach ( $new_tag_list[ $key ] as $list ) {
 					$slug = sanitize_title( $list );
+					$url = '?oaq[tags][]=' . $slug;
                     if ( is_array( $atts['event-link'] ) ) {
 	                    $url = $atts['event-link']['url'] . '?oaq[tags][]=' . $slug;
                     }
