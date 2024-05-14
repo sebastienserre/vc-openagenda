@@ -107,7 +107,7 @@ function p2p5_vc_openagenda_main( $atts ) {
 		$atts, 'p2p5-vc-openagenda-main'
 	);
 	$widget = $atts['agenda_code'];
-
+    $tags = '';
     if ( ! empty( $atts['tags'] ) ){
         $tags = '&oaq%5Btags%5D%5B0%5D=' . $atts['tags'];
     }
