@@ -503,16 +503,18 @@ function p2p5_vc_retrieve_info( $atts ) {
 
 		if ( in_array( 'cat', $options ) ) {
 
-			$cat  = $event['category']['label'];
-			$slug = $event['category']['slug'];
-			$url  = add_query_arg(
-				array(
-					'oaq' => array(
-						'category' => $slug,
+			if ( ! empty( $event['category'] ) ) {
+				$cat  = $event['category']['label'];
+				$slug = $event['category']['slug'];
+				$url  = add_query_arg(
+					array(
+						'oaq' => array(
+							'category' => $slug,
 
-					),
-				), $atts['event-link']['url'] );
-			$cat  = '<p class="p2p5-vc-element-openagenda-details-cat"><a href="' . $url . '" >' . $cat . '</a></p>';
+						),
+					), $atts['event-link']['url'] );
+				$cat  = '<p class="p2p5-vc-element-openagenda-details-cat"><a href="' . $url . '" >' . $cat . '</a></p>';
+			}
 		}
 
 		/**
