@@ -609,14 +609,14 @@ function p2p5_vc_display( $atts, $event, $city, $date, $cat='', $target='', $rel
         $lang = pll_current_language();
     }
 	if ( $atts['openagenda_layout'] == 'ver' ) {
-        vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url, $lang);
+        vc_oa_display_ver( $atts, $event, $city, $date, $cat, $lang, $target, $rel, $url );
 	} else {
-		vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url, $lang);
+		vc_oa_display_hor( $atts, $event, $city, $date, $lang , $cat, $target, $rel, $url );
 
 	}
 }
 
-function vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $rel='', $url='', $lang ){
+function vc_oa_display_hor( $atts, $event, $city, $date, $lang, $cat='', $target='', $rel='', $url='' ){
     ?>
     <div class="p2p5-vc-element-openagenda-single hor">
         <div class="p2p5-vc-element-openagenda-picture left">
@@ -648,7 +648,7 @@ function vc_oa_display_hor( $atts, $event, $city, $date, $cat='', $target='', $r
     <?php
 }
 
-function vc_oa_display_ver( $atts, $event, $city, $date, $cat, $target='', $rel='', $url='', $lang ){
+function vc_oa_display_ver( $atts, $event, $city, $date, $cat, $lang, $target='', $rel='', $url='' ){
 
 	?>
     <div class="p2p5-vc-element-openagenda-single ver">
