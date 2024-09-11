@@ -425,6 +425,10 @@ function p2p5_vc_retrieve_info( $atts ) {
 		$atts, 'p2p5-vc-openagenda'
 	);
 
+    if ( empty( $atts['event-link'] ) ){
+        return __( 'Please select an Event Link', 'vc-openagenda' );
+    }
+
 	$atts['openagenda_cat'] = clean( $atts['openagenda_cat'] );
 	$atts['openagenda_tag'] = clean( $atts['openagenda_tag'] );
 
