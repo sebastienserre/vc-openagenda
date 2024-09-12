@@ -217,7 +217,7 @@ h3.p2p5-vc-element-openagenda-details-title {
 	text-align: center;
 }
 
-.p2p5-vc-element-openagenda-single .p2p5-vc-element-openagenda-details-cat {
+.p2p5-vc-element-openagenda-single.hor .p2p5-vc-element-openagenda-details-cat {
 	background-color: inherit;
 }
 .bloc-openagenda .bloc-openagenda__box-title {
