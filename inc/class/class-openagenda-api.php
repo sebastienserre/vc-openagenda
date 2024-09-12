@@ -341,9 +341,14 @@ class OpenAgendaApi {
 
 	public function format_date( $event ){
 
-		$nb_day = sizeof( $event['timings'] );
+
 		$start  = strtotime( $event['timings'][0]['begin'] );
-		$end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
+        $nb_day = 2;
+        if ( is_countable( $event['timings'] ) ) {
+	        $nb_day = count( $event['timings'] );
+        }
+        $end    = strtotime( $event['timings'][ $nb_day - 1 ]['end'] );
+
 
 		// check if same day
 		$day_start = date_i18n( 'd', $start );

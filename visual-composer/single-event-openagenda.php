@@ -94,6 +94,9 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 		$atts, 'p2p5-vc-openagenda-single-event'
 	);
 	$atts['event-link'] = ( ! empty( $atts['event-link'] ) ) ? vc_build_link( $atts['event-link'] ) : '';
+    if ( empty( $atts['event-link'] ) ){
+        return __('No link Provided', 'vc-openagenda');
+    }
 
   //  $agenda_slug = $oa->get_slug( $atts['agenda_url'], true);
 
@@ -126,7 +129,6 @@ function p2p5_vc_retrieve_info_single( $atts ) {
 
     $event['image'] = $oa->get_image( $event['image']);
 
-	$img_size = get_image_size( 'featured-post' );
 	$cat  = '<p class="p2p5-vc-element-openagenda-details-cat"><a href="' . $atts['event-link']['url']  . '" >' . $atts['title'] . '</a></p>';
 
 	if ( empty( $atts['title'] ) ) {
